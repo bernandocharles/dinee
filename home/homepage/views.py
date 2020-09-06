@@ -37,6 +37,9 @@ def blog(request):
     #context = {"project": project}
     return render(request, template + "blog.html")
 
+def blogpost(request):
+    return render(request, template + 'blogpost.html')
+
 def faq(request):
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
