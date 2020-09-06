@@ -37,8 +37,11 @@ def blog(request):
     #context = {"project": project}
     return render(request, template + "blog.html")
 
-def blogpost(request):
-    return render(request, template + 'blogpost.html')
+def blogpost(request, postnumber):
+    data = {
+        "postnumber": postnumber
+    }
+    return render(request, template + 'blogpost.html', data)
 
 def faq(request):
     #project = Project.objects.get(pk=pk)
