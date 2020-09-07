@@ -5,6 +5,9 @@ from django.http import HttpResponse
 template = 'home/homepage/'
 dataset_list = 'CEP_OVO_DS_DEV.OVO_ref_province_DEV'
 
+blogposts = ['eatngo', 'Services', 'Payment', 'Restaurant', 'Customer', 'Appetizer', 'Customer', 'Food', 'Beverages', 'Dessert']
+colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'muted', 'dark', 'success', 'info']
+
 #def homepage(request):
     ##conn = utils.get_kinetica_conn()
     ##cursor = conn.cursor()
@@ -35,7 +38,11 @@ def services(request):
 def blog(request):
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
-    return render(request, template + "blog.html")
+    blogdata = {
+        "blogposts": blogposts,
+        "colors": colors
+    }
+    return render(request, template + "blog.html", blogdata)
 
 def blogpost(request, postnumber):
     data = {
