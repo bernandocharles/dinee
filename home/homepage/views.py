@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
+from django.contrib.auth.models import User
 ##from utils import utils
 
 template = 'home/homepage/'
@@ -55,3 +57,17 @@ def faq(request):
     #context = {"project": project}
     return render(request, template + "faq.html")
 
+def jsontest(request):
+    testdata = {
+        "foo": "bar",
+        "FU": "BAR"
+    }
+    return JsonResponse(testdata)
+
+def getuser(request, userid):
+    user = User.objects.get(id=userid)
+
+    return JsonResponse({
+        "username": user.username,
+        "id": user.id
+    })
