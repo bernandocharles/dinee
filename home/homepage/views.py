@@ -66,6 +66,8 @@ def jsontest(request):
 
 def getuser(request, userid):
     user = User.objects.get(id=userid)
+    print(user.__dict__)
+    print("Knock knock console.")
 
     return JsonResponse({
         "username": user.username,
