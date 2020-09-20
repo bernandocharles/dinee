@@ -4,6 +4,13 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  color: #797979;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  color: #e94924;
 }
 
 .footer-text {
