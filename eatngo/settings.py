@@ -80,7 +80,7 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'dineewebsite',
+        'NAME': 'dineewebsitedev',
 
         'USER': 'postgres',
 
