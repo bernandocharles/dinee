@@ -6,6 +6,11 @@
       margin-left : 1em;
       margin-right : 1em;
   }
+
+  .blog-preview {
+    max-width: 353px;
+    max-height: 201px;
+  }
   
   #why-dinee {
     color: white;
@@ -35,6 +40,17 @@
     height: 805px;
     padding-top: 72px;
   }
+
+  #dinee-blog {
+    color: white;
+    background-color: #e94924;
+    padding-top: 66px;
+    height: 613px;
+  }
+}
+
+footer {
+  background-color: #414141;
 }
 
 #cool-shape {
