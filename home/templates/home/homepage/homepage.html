@@ -6,21 +6,23 @@
     <br>
     <br>
     <br>
+<div class="container">
 <div class="row">
     <div class="col-md-7">
         <h1>Platform Contactless Dining</h1>
         <h1>di Indonesia</h1>
         <br>
-        <p>Platform digital dimana kamu bisa menikmati makanan favoritmu</p>
-        <p>di restoran terbaik kami tanpa interaksi dengan siapapun</p>
+        <p>Platform digital dimana kamu bisa menikmati makanan favoritmu
+        di restoran terbaik kami tanpa interaksi dengan siapapun</p>
         <br>
         <h5></h5>
         <p>Ayo bergabung bersama kami dan dapatkan kenyamanan makan di restoran terbaik kami</p>
-        <button type="button" class="btn btn-warning btn-sm" style="background-color: #e94924; padding: 12px; border-radius: 4px; color: white;"><b>Coba Sekarang</b></button>
+        <button type="button" class="btn btn-warning btn-sm" style="background-color: #e94924; padding: 12px 16px; border-radius: 25px; color: white;"><b>Coba Sekarang</b></button>
     </div>
     <div class="col-md-5">
         <img src="{% static 'img/eatngo.jpg' %}" alt="" width="100%">
     </div>
+</div>
 </div>
 
 
@@ -41,25 +43,23 @@
 
 
 <div class="col-lg-12" id="why-dinee">
-    <h2 class="text-lg-left">Kenapa harus Dinee?</h2>
+    <div class="container">
+        <h2 class="text-lg-left">Kenapa harus Dinee?</h2>
+    </div>
     <div class="row">
-        <h2>image here</h2>
+        <div id="cool-shape"><h1>image here</h1></div>
         <ul>
             <li>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Menu Makanan dari Restoran Terbaik</h5>
-                      <p class="card-text">Kini Anda bisa menikmati makanan favorit Anda dari restoran terbaik kami dengan nyaman.</p>
-                    </div>
-                  </div>
+                <h5 class="card-title">Menu Makanan dari Restoran Terbaik</h5>
+                <p class="card-text">Kini Anda bisa menikmati makanan favorit Anda dari restoran terbaik kami dengan nyaman.</p>
             </li>
             <li>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Contactless Payment</h5>
-                      <p class="card-text">Kini Anda bisa menikmati makanan favorit Anda dari restoran terbaik kami dengan nyaman.</p>
-                    </div>
-                  </div>
+                <h5 class="card-title">Contactless Payment</h5>
+                <p class="card-text">Anda dapat membayar makanan Anda melalui app kami dan Anda dapat memilih metode pembayaran yang kami sediakan.</p>
+            </li>
+            <li>
+                <h5 class="card-title">Nikmati Momen Istimewa Anda</h5>
+                <p class="card-text">Anda akan mempunyai lebih banyak waktu untuk keluarga dan sahabat Anda saat menikmati makanan favorit Anda.</p>
             </li>
         </ul>
     </div>
@@ -67,8 +67,35 @@
     <br>
 </div>
 
+<div class="col-lg-12" id="easy-way">
+    <div class="container">
+        <h2 class="text-lg-left">Cara Mudah Pakai Dinee</h2>
+        <div class="row">
+            <ol>
+                <li>
+                    <h5 class="card-title">Pilih Restoran Favoritmu di Aplikasi DInee</h5>
+                    <p class="card-text">Temukan restoran dengan fitur search atau pilih restoran dari home</p>
+                </li>
+                <li>
+                    <h5 class="card-title">Pilih makanan dan minuman yang kamu mau</h5>
+                    <p class="card-text">Kamu bisa pilih lebih dari satu makanan atau minuman</p>
+                </li>
+                <li>
+                    <h5 class="card-title">Checkout pilihan kamu dan lakukan pembayaran</h5>
+                    <p class="card-text">Kamu bisa pilih dine-in atau takeaway</p>
+                </li>
+                <li>
+                    <h5 class="card-title">Datang ke restoran dan nikmati hidanganmu</h5>
+                    <p class="card-text">Pramusaji akan datang dengan makanan dan minumanmu</p>
+                </li>
+            </ol>
+            <div id="cool-shape-2"><h2>image here</h2></div>
+        </div>
+    </div>
+</div>
 
-<div class="row">
+
+<div class="row container">
     <div class="col-md-4">
         <div class="card mb-2">
             <img class="card-img-top" src="{% static 'img/food.jpg' %}">
@@ -110,7 +137,7 @@
     </div>
 </div>
 <br>
-<div class="row">
+<div class="row container">
     <div class="col-md-4">
         <div class="card mb-2">
             <img class="card-img-top" src="{% static 'img/food.jpg' %}">
@@ -162,7 +189,7 @@
 <!-- End of Carousel Mobile -->
 
 <!-- Carousel Desktop -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
