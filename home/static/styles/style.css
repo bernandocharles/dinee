@@ -60,7 +60,7 @@ li.easy-way-li::marker {
 .footer-text {
   color: white;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 50px;
 }
 
@@ -96,32 +96,34 @@ background-color: transparent;
 }
 
 #cool-shape {
-  width: 308px;
+  /* width: 308px;
   height: 343px;
   border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 
-  margin: 3.5rem;
-  margin-bottom: 0px;
+  /* margin: 3.5rem;
+  margin-bottom: 0px; */
 
-  background: #FFFFFF;
-  transform: rotate(49.82deg);
+  margin-left: -4vw;
+
+  /* background: #FFFFFF;
+  transform: rotate(49.82deg); */
 
 }
 
 #cool-shape-2 {
   width: 463.05px;
   height: 518.57px;
-  border-radius: 50%;
+  /* border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
 
   background: #E94924;
-  transform: rotate(49.82deg);
+  transform: rotate(49.82deg); */
 }
 
 #easy-way {
@@ -187,6 +189,10 @@ background-color: transparent;
 }
 
 @media (min-width: 992px){
+  footer {
+    height: 398px;
+  }
+
   .blog-preview {
     /* max-width: 353px; */
     width: auto;
@@ -223,15 +229,18 @@ background-color: transparent;
 
     left: 143.97px;
     top: 43px;
-    margin-top: 86px;
-    margin-left: -286.97px;
+    margin-top: -43px;
+    margin-left: -200.97px;
 
     visibility: visible;
   }
 
   #cool-shape-2 {
+    width: 600.05px;
+    height: auto;
+
     margin-right: 0px;
-    margin-left: 2vw;
+    margin-left: -4vw;
   }
 
   #dinee-blog {
@@ -246,6 +255,7 @@ background-color: transparent;
   }
 
   #easy-way-ol {
+    margin-top: 4vh;
     margin-right: 1vw;
   }
 
@@ -254,7 +264,7 @@ background-color: transparent;
   }
 
   #homepage-ul {
-    padding: 10rem;
+    padding: 7rem;
     padding-top: 5rem;
   }
 
