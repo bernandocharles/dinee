@@ -5,7 +5,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <b><a class="navbar-brand logo" href="{% url 'homepage' %}">dinee</a></b>
+        <b><a class="navbar-brand logo" href="{% url 'homepage' %}"><img src="{% static 'img/Dinee_Logo_Red.png' %}" width="90" height="auto"></a></b>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,13 +21,13 @@
               <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: dimgray;" href="{% url 'services' %}">Services</a>
+              <a class="nav-link" href="{% url 'services' %}">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: dimgray;" href="{% url 'blog' %}">Blog</a>
+              <a class="nav-link" href="{% url 'blog' %}">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: dimgray;" href="{% url 'faq' %}">FAQ</a>
+              <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
             </li>
           </ul>
         </div>
@@ -37,7 +37,7 @@
 
 <!-- Main Section -->
 
-<div class="container">
+<div id="main-section">
     {% block page_content %}{% endblock %}
 </div>
 
@@ -53,10 +53,10 @@
     <div class="row px-0 mx-0 py-3" style="background-color: #414141;">
 
       <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3 mx-0 py-3" style="padding-left: 15vw;">
+      <div class="col-md-6 mt-md-0 mt-3 mx-0 py-3" id="footer-column-1">
 
         <!-- Content -->
-          <h3 class="text-lowercase" style="color: white;">dinee</h3>
+          <img src="{% static 'img/Dinee_Logo_Red.png' %}" width="180" height="auto">
 {# <img class="rounded-left" src="{% static 'img/eatngoword.jpg' %}" alt="eatngoword"> #}
           <p style="color: white;">PT Kresna Teknologi Indonesia</p>
           <p style="color: white;">Address, Phone, Email</p>
@@ -95,7 +95,7 @@
       <div class="col-md-3 mb-md-0 mb-3">
 
         <!-- Links -->
-        <h5 class="text-uppercase" style="color: white;">Navigasi</h5>
+        <!-- <h5 class="text-uppercase" style="color: white;">Navigasi</h5> -->
 
         <ul class="list-unstyled">
           <li>
@@ -122,7 +122,7 @@
       <div class="col-md-3 mb-md-0 mb-3">
 
         <!-- Links -->
-        <h5 class="text-uppercase" style="color: white;">Legal</h5>
+        <!-- <h5 class="text-uppercase" style="color: white;">Legal</h5> -->
 
         <ul class="list-unstyled">
           <li>
@@ -149,8 +149,8 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3" style="color: #212529;">© 2020 Copyright:
-    <a href="#!"> PT Kresna Teknologi Indonesia</a>
+  <div class="footer-copyright text-center py-3" style="color: white;">© 2020 
+    PT Kresna Teknologi Indonesia
   </div>
   <!-- Copyright -->
 

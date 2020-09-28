@@ -6,22 +6,24 @@
     <br>
     <br>
     <br>
+<div class="container">
 <div class="row">
     <div class="col-md-7">
         <h1>Platform Contactless Dining</h1>
         <h1>di Indonesia</h1>
         <br>
-        <p>Platform digital dimana kamu bisa menikmati makanan favoritmu</p>
-        <p>di restoran terbaik kami tanpa interaksi dengan siapapun</p>
+        <p>Platform digital dimana kamu bisa menikmati makanan favoritmu
+        di restoran terbaik kami tanpa interaksi dengan siapapun</p>
         <br>
         <h5></h5>
         <p>Ayo bergabung bersama kami dan dapatkan kenyamanan makan di restoran terbaik kami</p>
-        <button type="button" class="btn btn-warning btn-sm" style="background-color: #e94924; padding: 12px; border-radius: 4px; color: white;"><b>Coba Sekarang</b></button>
+        <button type="button" class="btn btn-warning btn-sm" style="background-color: #e94924; padding: 12px 16px; border-radius: 25px; color: white;"><b>Coba Sekarang</b></button>
     </div>
     <div class="col-md-5">
         <img src="{% static 'img/eatngo.jpg' %}" alt="" width="100%">
     </div>
 </div>
+</div>
 
 
 
@@ -40,164 +42,86 @@
     <br>
 
 
-<div class="col-lg-12">
-    <h4 class="text-lg-center">Kami memberikan kemudahan</h4>
-    <h4 class="text-lg-center">dalam menikmati makanan favorit anda</h4>
-
+<div class="col-lg-12" id="why-dinee">
+    <div class="container">
+        <h2 class="text-lg-left h2-title">Kenapa harus dinee?</h2>
+    </div>
+    <div class="row">
+        <div id="cool-shape"><h1>image here</h1></div>
+        <ul id="homepage-ul">
+            <li id="homepage-ul-1">
+                <h2 class="card-title">Menu Makanan dari Restoran Terbaik</h2>
+                <p class="card-text why-dinee-text">Kini Anda bisa menikmati makanan favorit Anda dari restoran terbaik kami dengan nyaman.</p>
+            </li>
+            <li id="homepage-ul-2">
+                <h2 class="card-title">Contactless Payment</h2>
+                <p class="card-text why-dinee-text">Anda dapat membayar makanan Anda melalui app kami dan Anda dapat memilih metode pembayaran yang kami sediakan.</p>
+            </li>
+            <li id="homepage-ul-3">
+                <div style="margin-bottom:25px;">
+                    <h2 class="card-title">Nikmati Momen Istimewa Anda</h2>
+                    <p class="card-text why-dinee-text">Anda akan mempunyai lebih banyak waktu untuk keluarga dan sahabat Anda saat menikmati makanan favorit Anda.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
     <br>
     <br>
 </div>
 
+<div class="col-lg-12" id="easy-way">
+    <div class="container">
+        <h2 class="text-lg-left h2-title" id="easy-way-title">Cara Mudah Pakai Dinee</h2>
+        <div class="row">
+            <ol id="easy-way-ol">
+                <li class="easy-way-li">
+                    <h5 class="easy-way-header">Pilih restoran favoritmu di Aplikasi Dinee</h5>
+                    <p class="card-text">Temukan restoran dengan fitur search atau pilih restoran dari home</p>
+                </li>
+                <li class="easy-way-li">
+                    <h5 class="easy-way-header">Pilih makanan dan minuman yang kamu mau</h5>
+                    <p class="card-text">Kamu bisa pilih lebih dari satu makanan atau minuman</p>
+                </li>
+                <li class="easy-way-li">
+                    <h5 class="easy-way-header">Checkout pilihan kamu dan lakukan pembayaran</h5>
+                    <p class="card-text">Kamu bisa pilih dine-in atau takeaway</p>
+                </li>
+                <li class="easy-way-li">
+                    <h5 class="easy-way-header">Datang ke restoran dan nikmati hidanganmu</h5>
+                    <p class="card-text">Pramusaji akan datang dengan makanan dan minumanmu</p>
+                </li>
+            </ol>
+            <div id="cool-shape-2"><h2>image here</h2></div>
+        </div>
+    </div>
+</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static 'img/food.jpg' %}">
-            <div class="card-body">
-                <h6 class="card-title">Menu makanan dari restoran terbaik</h6>
-                <p class="card-text">Kini Anda bisa menikmati makanan favorit Anda dari restoran terbaik kami dengan nyaman</p>
-                <a href="{% url 'homepage' %}"
-                   class="btn btn-primary">
-                    Lihat menu makanan
-                </a>
-            </div>
+<div class="col-lg-12 container" id="dinee-blog">
+    <div class="container">
+        <div class="d-flex flex-row justify-content-between mb-5 align-items-center">
+            <h2 class="text-lg-left">Dinee Blog</h2>
+            <a href="{% url 'blog' %}" id="view-more">View more</a>
         </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static 'img/pay.jpg' %}">
-            <div class="card-body">
-                <h6 class="card-title">Contactless Payment</h6>
-                <p class="card-text">Anda dapat membayar makanan Anda melalui app kami dan Anda dapat memilih metode pembayaran yang kami sediakan</p>
-                <a href="{% url 'homepage' %}"
-                   class="btn btn-primary">
-                    Lihat metode pembayaran
-                </a>
+        <div class="row">
+            <div class="col-md-4">
+                <img class="blog-preview" src="{% static 'img/food.jpg' %}">
+                <p class="blog-date">August 18, 2020</p>
+                <p class="blog-title">Cara aman makan di restoran saat pandemi</p>
             </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static 'img/dines.jpg' %}">
-            <div class="card-body">
-                <h6 class="card-title">Nikmati momen istimewa Anda</h6>
-                <p class="card-text">Anda akan mempunyai lebih banyak waktu untuk keluarga dan sahabat Anda saat menikmati makanan favorit Anda</p>
-                <a href="{% url 'homepage' %}"
-                   class="btn btn-primary">
-                    Lihat daftar restoran
-                </a>
+            <div class="col-md-4">
+                <img class="blog-preview" src="{% static 'img/food.jpg' %}">
+                <p class="blog-date">August 12, 2020</p>
+                <p class="blog-title">Kemudahan Contactless Dining</p>
+            </div>
+            <div class="col-md-4">
+                <img class="blog-preview" src="{% static 'img/food.jpg' %}">
+                <p class="blog-date">August 8, 2020</p>
+                <p class="blog-title">Simak tips n trick memilih restoran</p>
             </div>
         </div>
     </div>
 </div>
-<br>
-<div class="row">
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static 'img/food.jpg' %}">
-            <div class="card-body">
-                <h6 class="card-title">Menu makanan dari restoran terbaik</h6>
-                <p class="card-text">Kini Anda bisa menikmati makanan favorit Anda dari restoran terbaik kami dengan nyaman</p>
-                <a href="{% url 'homepage' %}"
-                   class="btn btn-primary">
-                    Lihat menu makanan
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static 'img/pay.jpg' %}">
-            <div class="card-body">
-                <h6 class="card-title">Contactless Payment</h6>
-                <p class="card-text">Anda dapat membayar makanan Anda melalui app kami dan Anda dapat memilih metode pembayaran yang kami sediakan</p>
-                <a href="{% url 'homepage' %}"
-                   class="btn btn-primary">
-                    Lihat metode pembayaran
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static 'img/dines.jpg' %}">
-            <div class="card-body">
-                <h6 class="card-title">Nikmati momen istimewa Anda</h6>
-                <p class="card-text">Anda akan mempunyai lebih banyak waktu untuk keluarga dan sahabat Anda saat menikmati makanan favorit Anda</p>
-                <a href="{% url 'homepage' %}"
-                   class="btn btn-primary">
-                    Lihat daftar restoran
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<br>
-    <br>
-    <br>
 
-<!-- Carousel Mobile -->
-
-
-<!-- End of Carousel Mobile -->
-
-<!-- Carousel Desktop -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-              <img class="d-block w-100" src="{% static 'img/dines.jpg' %}" alt="First slide">
-              <div class="card-body">
-                <h5 class="carou-text">Dine In</h5>
-                <p class="carou-text">Enjoy your safe dine in experience</p>
-              </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-              <img class="d-block w-100" src="{% static 'img/pay.jpg' %}" alt="Second slide">
-              <div class="card-body">
-              <!-- <div class="carousel-caption d-none d-md-block"> -->
-                <h5 class="carou-text">Payment</h5>
-                <p class="carou-text">Easy payment via our app</p>
-              </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-              <img class="d-block w-100" src="{% static 'img/food.jpg' %}" alt="Third slide">
-              <div class="card-body">
-                <h5 class="carou-text">Food</h5>
-                <p class="carou-text">Enjoy your favorite food</p>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon carou-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next carou-icon" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-<!-- End of Carousel Desktop -->
-
-    <br>
-    <br>
-    <br>
-    <br>
 
 
 {% endblock %}
