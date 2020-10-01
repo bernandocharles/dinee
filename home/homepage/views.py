@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 template = 'home/homepage/'
 dataset_list = 'CEP_OVO_DS_DEV.OVO_ref_province_DEV'
 
-blogposts = ['eatngo', 'Services', 'Payment', 'Restaurant', 'Customer', 'Appetizer', 'Customer', 'Food', 'Beverages', 'Dessert']
-colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'muted', 'dark', 'success', 'info']
+blogposts = ['eatngo', 'Services', 'Payment', 'Restaurant', 'Customer', 'Appetizer', 'Customer', 'Food', 'Beverages', 'Dessert', 'dinee', 'Michelin']
+colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'muted', 'dark', 'success', 'info', 'primary', 'secondary']
 
 #def homepage(request):
     ##conn = utils.get_kinetica_conn()

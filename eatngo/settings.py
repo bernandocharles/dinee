@@ -70,6 +70,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'eatngo.wsgi.application'
 
+# Custom User Model
+AUTH_USER_MODEL = 'home.CustomUser'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

@@ -86,7 +86,9 @@ background-color: transparent;
   line-height: 29px;
 }
 
-
+#blog-header {
+  color: #E94924;
+}
 
 #dinee-blog {
   color: white;
