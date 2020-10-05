@@ -7,7 +7,7 @@ body {
 }
 
 footer {
-  background-color: #414141;
+  background-color: #191A1F;
 }
 
 h1 {
@@ -80,6 +80,12 @@ li.easy-way-li::marker {
 .navbar-default .navbar-nav > .active > a:focus {
 color: #e94924!important; /* <—– change your color here*/
 background-color: transparent;
+}
+
+.team-profile {
+  width: 160px;
+  height: auto;
+  border-radius: 50%;
 }
 
 .why-dinee-text {
@@ -217,6 +223,12 @@ background-color: transparent;
   .navbar li {
       margin-left : 1em;
       margin-right : 1em;
+  }
+
+  .team-profile {
+    width: 183px;
+    height: auto;
+    border-radius: 50%;
   }
 
   .why-dinee-text {

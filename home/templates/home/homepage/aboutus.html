@@ -2,25 +2,38 @@
 {% load static %}
 
 {% block page_content %}
-    <h3></h3>
     <br>
     <br>
     <br>
-<div class="row">
-    <div class="col-md-7">
-        <h1 style="text-align: center">Tentang Kami</h1>
 
-        <br>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+<div class="container mt-5">
+  <h2 style="color: #e94924">Tentang dinee</h2>
 
-        <br>
-        <h5></h5>
+  <br>
+  
+  <p>
+    Dinee merupakan lorem ipsum dolor sit amet, consectetur adipiscing elit. Id tortor magna pretium amet in gravida at commodo. Lacus bibendum consequat, aenean tempor laoreet curabitur eget augue vestibulum. 
+    <br>
+    <br>
+    Sagittis habitant vestibulum nunc sit odio risus. Etiam praesent urna tincidunt dolor fermentum amet. Sem adipiscing parturient lorem ac parturient ut. Vestibulum tellus feugiat eget nunc adipiscing ornare diam pretium nulla. 
+    Pretium faucibus aliquam eu, sed scelerisque euismod. Id aliquet condimentum posuere porttitor. Ac volutpat, donec lectus pulvinar amet, faucibus.
+  </p>
 
-    </div>
-    <div class="col-md-5">
-        <img src="{% static 'img/eatngo.jpg' %}" alt="" width="100%">
-    </div>
+  <br>
+  <h5></h5>
+  <h4>Visi</h4>
+  <p>
+    Vestibulum tellus feugiat eget nunc adipiscing ornare diam pretium nulla. 
+  </p>
+  <h4>Misi</h4>
+  <p>
+    Vestibulum tellus feugiat eget nunc adipiscing ornare diam pretium nulla. 
+    Sagittis habitant vestibulum nunc sit odio risus.
+    Etiam praesent urna tincidunt dolor fermentum amet.
+  </p>
+
 </div>
+
 
 
 
@@ -40,57 +53,31 @@
 
     <hr class="featurette-divider">
 
-<div class="col-lg-12">
-    <h4 class="text-lg-center">Tim Kami</h4>
+<div class="container">
+    <h4>Kenali Tim Kami</h4>
 
 
     <br>
     <br>
+
+    <div class="row" id="dinee-team">
+      <div class="col">
+        <img class="team-profile" src="{% static 'img/markz.jpg' %}" alt="">
+        <h2 class="featurette-heading">Rio Prasetya </h2>
+        <h5 class="featurette-heading">Chief Executive Officer </h5>
+      </div>
+      <div class="col">
+        <img class="team-profile" src="{% static 'img/markz.jpg' %}" alt="">
+        <h2 class="featurette-heading">Rama Kresna </h2>
+        <h5 class="featurette-heading">Chief Operating Officer </h5>
+      </div>
+      <div class="col">
+        <img class="team-profile" src="{% static 'img/markz.jpg' %}" alt="">
+        <h2 class="featurette-heading">Charles Bernando </h2>
+        <h5 class="featurette-heading">Chief Technology Officer </h5>
+      </div>
+    </div>
 </div>
-
-
-
-
-        <div class="row featurette">
-          <div class="col-md-8">
-            <h2 class="featurette-heading">Rio Prasetya </h2>
-            <h5 class="featurette-heading">Chief Executive Officer </h5>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. </p>
-          </div>
-          <div class="col-md-4">
-            <img class="featurette-image img-fluid mx-auto" src="{% static 'img/markz.jpg' %}" alt="">
-          </div>
-        </div>
-
-    <br>
-    <br>
-
-        <div class="row featurette">
-          <div class="col-md-8">
-            <h2 class="featurette-heading">Rama Kresna </h2>
-            <h5 class="featurette-heading">Chief Operating Officer </h5>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. </p>
-          </div>
-          <div class="col-md-4">
-            <img class="featurette-image img-fluid mx-auto" src="{% static 'img/markz.jpg' %}" alt="">
-          </div>
-        </div>
-    <br>
-    <br>
-
-
-        <div class="row featurette">
-          <div class="col-md-8">
-            <h2 class="featurette-heading">Charles Bernando </h2>
-            <h5 class="featurette-heading">Chief Technology Officer </h5>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. </p>
-          </div>
-          <div class="col-md-4">
-            <img class="featurette-image img-fluid mx-auto" src="{% static 'img/markz.jpg' %}" alt="">
-          </div>
-        </div>
-
-
 
 <br>
 <br>

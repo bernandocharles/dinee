@@ -44,49 +44,98 @@
       </div>
       
 
-      <div class="row mb-2">
-        {% for post in blogposts %}
-          {% if forloop.counter == 1 %}
-            <div class="blog-card">
-              <img src="{% static 'img/classy.png' %}">
-              <h3>
-                <a href="{% url 'post' forloop.counter %}">
-                  Post Number {{ forloop.counter }}
-                </a>
-              </h3>
+      <div class="row mb-2" id="blog-highlight">
+        <div class="blog-card col-6">
+          <img src="{% static 'img/classy.png' %}" width='100%' height='auto'>
+          <h3>
+            <a href="{% url 'post' 1 %}">
+              Post Number 1 : {{ blogposts.0.title }}
+            </a>
+          </h3>
+          <p>Ac non facilisi pulvinar. Ut orci id a et, quis aliquet lorem magna. Vestibulum consequat quis aliquam dolor mi enim.</p>
+          <div class="row justify-content-between">
+            <p class="col">{{ blogposts.0.author }}</p>
+            <p class="text-lg-right col">{{ blogposts.0.published_date }}</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-4">
+              <img src="{% static 'img/classy.png' %}" width='100%'>
             </div>
-          {% else %}
-            <div class="card bg-light mb-3" style="max-width: 18rem;">
-              <div class="card-header">Header</div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <a href="{% url 'post' forloop.counter %}">
-                    Post Number {{ forloop.counter }}
-                  </a>
-                </h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="col-8">
+              <p>Post Number 2: {{ blogposts.1.title }}</p>
+              <div class="row justify-content-between">
+                <p class="col">{{ blogposts.1.author }}</p>
+                <p class="text-lg-right col">{{ blogposts.1.published_date }}</p>
               </div>
             </div>
-          {% endif %}
-        <!-- <div class="col-md-6">
-          <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-            <div class="card-body d-flex flex-column align-items-start">
-              {% with colorindex=forloop.counter %}
-              <strong class="d-inline-block mb-2 text-success">{{ post }}</strong>
-              {% endwith %}
-              <h3 class="mb-0">
-                <a class="text-dark" href="{% url 'post' forloop.counter %}">Post number {{ forloop.counter }}</a>
-              </h3>
-              <div class="mb-1 text-muted">Nov 11</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#">Continue reading</a>
-            </div>
-            <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
           </div>
-        </div> -->
+          <div class="row">
+            <div class="col-4">
+              <img src="{% static 'img/classy.png' %}" width='100%'>
+            </div>
+            <div class="col-8">
+              <p>Post Number 2: {{ blogposts.2.title }}</p>
+              <div class="row justify-content-between">
+                <p class="col">{{ blogposts.2.author }}</p>
+                <p class="text-lg-right col">{{ blogposts.2.published_date }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <img src="{% static 'img/classy.png' %}" width='100%'>
+            </div>
+            <div class="col-8">
+              <p>Post Number 2: {{ blogposts.3.title }}</p>
+              <div class="row justify-content-between">
+                <p class="col">{{ blogposts.3.author }}</p>
+                <p class="text-lg-right col">{{ blogposts.3.published_date }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        {% for post in blogposts %}
+          <div class="col-4" width='400px'>
+            <img src="{% static 'img/classy.png' %}" width='378px' height='auto'>
+            <h3>
+              <a href="{% url 'post' forloop.counter %}">
+                Post Number {{ forloop.counter }} : {{ post.title }}
+              </a>
+            </h3>
+            <p>Ac non facilisi pulvinar. Ut orci id a et, quis aliquet lorem magna. Vestibulum consequat quis aliquam dolor mi enim.</p>
+            <div class="row justify-content-between">
+              <p class="col">{{ post.author }}</p>
+              <p class="text-lg-right col">{{ post.published_date }}</p>
+            </div>
+          </div>
+          <!-- <p>{{ post }}</p> -->
         {% endfor %}
       </div>
 
+      <nav class="col-md-12" aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          {% for iteration in pagenumber %}
+          <li class="page-item"><a class="page-link" href="#">{{ iteration }}</a></li>
+          {% endfor %}
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 </div>
 
 

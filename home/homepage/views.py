@@ -2,13 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.contrib.auth.models import User
+from home.models import Blogpost
 ##from utils import utils
 
 template = 'home/homepage/'
 dataset_list = 'CEP_OVO_DS_DEV.OVO_ref_province_DEV'
 
-blogposts = ['eatngo', 'Services', 'Payment', 'Restaurant', 'Customer', 'Appetizer', 'Customer', 'Food', 'Beverages', 'Dessert', 'dinee', 'Michelin']
-colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'muted', 'dark', 'success', 'info', 'primary', 'secondary']
+pagenumber = len(Blogpost.objects.order_by('published_date')) / 12 + 1
 
 #def homepage(request):
     ##conn = utils.get_kinetica_conn()
@@ -41,14 +41,15 @@ def blog(request):
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
     blogdata = {
-        "blogposts": blogposts,
-        "colors": colors
+        "blogposts": Blogpost.objects.order_by('published_date'),
+        "pagenumber": range(1, int(pagenumber) + 1, 1)
     }
     return render(request, template + "blog.html", blogdata)
 
 def blogpost(request, postnumber):
     data = {
-        "postnumber": postnumber
+        "postnumber": int(postnumber),
+        "post": Blogpost.objects.order_by('published_date')[int(postnumber)-1]
     }
     return render(request, template + 'blogpost.html', data)
 
