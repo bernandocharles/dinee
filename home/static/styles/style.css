@@ -134,6 +134,12 @@ background-color: transparent;
   transform: rotate(49.82deg); */
 }
 
+#dinee-team {
+  height: 1266px;
+  color: white;
+  background-color: #E94924;
+}
+
 #easy-way {
   margin-top: 72px;
   margin-bottom: 72px;
@@ -262,6 +268,12 @@ background-color: transparent;
     background-color: #e94924;
     padding-top: 66px;
     height: 613px;
+  }
+
+  #dinee-team {
+    height: 640px;
+    color: white;
+    background-color: #E94924;
   }
 
   #easy-way {
