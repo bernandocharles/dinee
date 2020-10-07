@@ -55,13 +55,15 @@ li.easy-way-li::marker {
   line-height: 23px;
 }
 
-
-
 .footer-text {
   color: white;
   font-weight: 300;
   font-size: 16px;
   line-height: 50px;
+}
+
+.generic-header-1 {
+  color: #E94924
 }
 
 .h2-title {
@@ -73,13 +75,31 @@ li.easy-way-li::marker {
   color: #e94924!important;
 }
 
+.navbar-bg-white {
+  background-color: #FFFFFF!important;
+}
 
+.navbar-bg-dark {
+  background-color: #191A1F!important;
+}
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
 color: #e94924!important; /* <—– change your color here*/
 background-color: transparent;
+}
+
+.profile-job-title {
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #FFFFFF;
+
 }
 
 .team-profile {
@@ -231,6 +251,18 @@ background-color: transparent;
       margin-right : 1em;
   }
 
+  .profile-job-title {
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+  
+    color: #FFFFFF;
+    
+  }
+
   .team-profile {
     width: 183px;
     height: auto;
@@ -271,7 +303,7 @@ background-color: transparent;
   }
 
   #dinee-team {
-    height: 640px;
+    height: 648px;
     color: white;
     background-color: #E94924;
   }

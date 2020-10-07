@@ -7,7 +7,7 @@
     <br>
 
 <div class="container mt-5">
-  <h2 style="color: #e94924">Tentang dinee</h2>
+  <h2 class="generic-header-1">Tentang dinee</h2>
 
   <br>
   
@@ -21,12 +21,12 @@
 
   <br>
   <h5></h5>
-  <h4>Visi</h4>
+  <h4 class="generic-header-1 my-4">Visi</h4>
   <p>
     Vestibulum tellus feugiat eget nunc adipiscing ornare diam pretium nulla. 
   </p>
-  <h4>Misi</h4>
-  <p>
+  <h4 class="generic-header-1 my-4">Misi</h4>
+  <p style="max-width: 40vw;">
     Vestibulum tellus feugiat eget nunc adipiscing ornare diam pretium nulla. 
     Sagittis habitant vestibulum nunc sit odio risus.
     Etiam praesent urna tincidunt dolor fermentum amet.
@@ -43,47 +43,73 @@
     <br>
 
 <div id="dinee-team">
-  <div class="container" id="dinee-team">
-      <h4>Kenali Tim Kami</h4>
+  <div class="container">
+    <div class="py-5">
+
+      <h2>Kenali Tim Kami</h2>
+    </div>
 
 
       <br>
       <br>
 
       <div class="row">
-        <div class="col">
-          <img class="team-profile" src="{% static 'img/markz.jpg' %}" alt="">
+        <div class="col mx-5 px-0">
+          <div class="d-flex justify-content-center align-items-center mb-5">
+            <img class="team-profile align-self-center" src="{% static 'img/markz.jpg' %}" alt="rio_prasetya">
+          </div>
           <h2 class="featurette-heading">Rio Prasetya </h2>
-          <h5 class="featurette-heading">Chief Executive Officer </h5>
+          <h5 class="profile-job-title">Chief Executive Officer </h5>
+          <div class="row m-1">
+            <img class="mr-2" src="{% static 'img/facebook.png' %}" width="38px">
+            <img src="{% static 'img/linkedin.png' %}" width="38px">
+          </div>
         </div>
-        <div class="col">
-          <img class="team-profile" src="{% static 'img/markz.jpg' %}" alt="">
+        <div class="col mx-5 px-0">
+          <div class="d-flex justify-content-center align-items-center mb-5">
+            <img class="team-profile align-self-center" src="{% static 'img/markz.jpg' %}" alt="rama_kresna">
+          </div>
           <h2 class="featurette-heading">Rama Kresna </h2>
-          <h5 class="featurette-heading">Chief Operating Officer </h5>
+          <h5 class="profile-job-title">Chief Operating Officer </h5>
+          <div class="row m-1">
+            <img class="mr-2" src="{% static 'img/facebook.png' %}" width="38px">
+            <img src="{% static 'img/linkedin.png' %}" width="38px">
+          </div>
         </div>
-        <div class="col">
-          <img class="team-profile" src="{% static 'img/markz.jpg' %}" alt="">
+        <div class="col mx-5 px-0">
+          <div class="d-flex justify-content-center align-items-center mb-5">
+            <img class="team-profile align-self-center" src="{% static 'img/markz.jpg' %}" alt="charles_bernando">
+          </div>
           <h2 class="featurette-heading">Charles Bernando </h2>
-          <h5 class="featurette-heading">Chief Technology Officer </h5>
+          <h5 class="profile-job-title">Chief Technology Officer </h5>
+          <div class="row m-1">
+            <img class="mr-2" src="{% static 'img/facebook.png' %}" width="38px">
+            <img src="{% static 'img/linkedin.png' %}" width="38px">
+          </div>
         </div>
       </div>
   </div>
 </div>
 
 <br>
-<br>
-<br>
-    <br>
-    <br>
 
 
 <!--Main layout-->
-<main class="m-0 p-0">
-  <div class="container-fluid m-0 p-0">
+<main class="m-5 py-5">
+  <div class="container mb-5">
 
-    <!--Google map-->
-    <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 500px;">
-        <iframe height="100%" width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.678625956497!2d106.71913682917429!3d-6.168970999720849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f82625360433%3A0xba93f495796a6a9e!2sJl.%20Kosambi%20Baru%20No.1f%2C%20RT.15%2FRW.1%2C%20Duri%20Kosambi%2C%20Kecamatan%20Cengkareng%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011750!5e0!3m2!1sen!2sid!4v1595623328324!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    <h2 class="generic-header-1">Lokasi Kami</h2>
+
+    <div class="row mt-5">
+      <div class="col" style="color: black;">
+        <h4>Main Office</h4>
+        <br>
+        <p style="font-weight: 300; line-height: 30px;">Jl. Kosambi Baru No.1f, RT.15/RW.1, Duri Kosambi, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11750</p>
+      </div>
+      <!--Google map-->
+      <div id="map-container-google-2" class="col-md-8 map-container" style="height: 401px;">
+          <iframe height="100%" width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.678625956497!2d106.71913682917429!3d-6.168970999720849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f82625360433%3A0xba93f495796a6a9e!2sJl.%20Kosambi%20Baru%20No.1f%2C%20RT.15%2FRW.1%2C%20Duri%20Kosambi%2C%20Kecamatan%20Cengkareng%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011750!5e0!3m2!1sen!2sid!4v1595623328324!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen></iframe>
+      </div>
     </div>
 
   </div>
