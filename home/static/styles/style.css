@@ -28,6 +28,24 @@ li.easy-way-li::marker {
   background-color: #e94924;
 }
 
+.accord-header {
+  font-weight: 500;
+  font-size: 13px;
+  color: #595959;
+  background-color: transparent;
+}
+
+.accord-header:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.accord-text {
+  color: #000000;
+
+}
+
 .blog-preview {
   width: auto;
   max-height: 173px;
@@ -225,6 +243,10 @@ background-color: transparent;
 @media (min-width: 992px){
   footer {
     height: 398px;
+  }
+
+  .accord-header {
+    font-size: 18px;
   }
 
   .blog-preview {
