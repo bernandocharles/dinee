@@ -81,7 +81,15 @@ li.easy-way-li::marker {
 }
 
 .generic-header-1 {
-  color: #E94924
+  color: #E94924;
+}
+
+.generic-white-text {
+  color: #FFFFFF;
+}
+
+.generic-black-text {
+  color: #000000;
 }
 
 .h2-title {
@@ -189,6 +197,11 @@ background-color: transparent;
 
 #easy-way-ol {
   padding-top: 2vh;
+}
+
+#faq-page-bottom {
+  height: 288px;
+  background-color: #E94924;
 }
 
 #homepage-ol {
@@ -337,6 +350,10 @@ background-color: transparent;
   #easy-way-ol {
     margin-top: 4vh;
     margin-right: 1vw;
+  }
+
+  #faq-page-bottom {
+    height: 386px;
   }
 
   #footer-column-1 {
