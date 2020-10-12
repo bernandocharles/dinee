@@ -1,6 +1,8 @@
 
 let navbarLight = document.getElementById("nav-bar-light");
-let navbarDark = document.getElementById("nav-bar-dark")
+let navbarDark = document.getElementById("nav-bar-dark");
+let blogSearch = document.getElementById("blog-search-form");
+let siteUrl = "http://127.0.0.1:8000"
 
 // Change navbar on scroll
 
@@ -36,6 +38,14 @@ window.onscroll = function() {
   scrollFunction()
   scrolled = true;
 }
+
+// Search function event
+blogSearch.addEventListener("keydown", function (event) {
+  console.log("script search jalan");
+  if (event.keyCode == 13) {
+    window.location.href = siteUrl + `/blog/search/${blogSearch.value}`;
+  };
+})
 
 // Fade-in / Fade-out animation
 

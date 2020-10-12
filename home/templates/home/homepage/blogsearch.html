@@ -13,7 +13,7 @@
 
       <div class="d-flex flex-row justify-content-between mb-5 align-items-center" id="blog-header">
         <div class="col">
-          <h2 class="h2-title">Ada apa di dinee</h2>
+          <h2 class="h2-title">{{ characters }}</h2>
         </div>
         <div class="row col-6">
           <div class="col-md-8">
@@ -30,61 +30,7 @@
         </div>
       </div>
       
-
-      <div class="row mb-2" id="blog-highlight">
-        <div class="blog-card col-6">
-          <img src="{% static 'img/classy.png' %}" width='100%' height='auto'>
-          <h3>
-            <a href="{% url 'post' 1 %}">
-              Post Number 1 : {{ blogposts.0.title }}
-            </a>
-          </h3>
-          <p>Ac non facilisi pulvinar. Ut orci id a et, quis aliquet lorem magna. Vestibulum consequat quis aliquam dolor mi enim.</p>
-          <div class="row justify-content-between">
-            <p class="col">{{ blogposts.0.author }}</p>
-            <p class="text-lg-right col">{{ blogposts.0.published_date }}</p>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="row">
-            <div class="col-4">
-              <img src="{% static 'img/classy.png' %}" width='100%'>
-            </div>
-            <div class="col-8">
-              <p>Post Number 2: {{ blogposts.1.title }}</p>
-              <div class="row justify-content-between">
-                <p class="col">{{ blogposts.1.author }}</p>
-                <p class="text-lg-right col">{{ blogposts.1.published_date }}</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4">
-              <img src="{% static 'img/classy.png' %}" width='100%'>
-            </div>
-            <div class="col-8">
-              <p>Post Number 2: {{ blogposts.2.title }}</p>
-              <div class="row justify-content-between">
-                <p class="col">{{ blogposts.2.author }}</p>
-                <p class="text-lg-right col">{{ blogposts.2.published_date }}</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4">
-              <img src="{% static 'img/classy.png' %}" width='100%'>
-            </div>
-            <div class="col-8">
-              <p>Post Number 2: {{ blogposts.3.title }}</p>
-              <div class="row justify-content-between">
-                <p class="col">{{ blogposts.3.author }}</p>
-                <p class="text-lg-right col">{{ blogposts.3.published_date }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      {% if blogposts %}}
       <div class="row">
         {% for post in blogposts %}
           <div class="col-4" width='400px'>
@@ -100,9 +46,14 @@
               <p class="text-lg-right col">{{ post.published_date }}</p>
             </div>
           </div>
-          <!-- <p>{{ post }}</p> -->
         {% endfor %}
       </div>
+
+      {% else %}
+
+      <h2> Hasil pencarian tidak ditemukan untuk "{{ characters }}"</h2>
+
+      {% endif %}
 
       <nav class="col-md-12" aria-label="Page navigation example">
         <ul class="pagination">

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.contrib.auth.models import User
+from home.homepage import search
 from home.models import Blogpost
 ##from utils import utils
 
@@ -42,16 +43,25 @@ def blog(request):
     #context = {"project": project}
     blogdata = {
         "blogposts": Blogpost.objects.order_by('published_date'),
-        "pagenumber": range(1, int(pagenumber) + 1, 1)
+        "pagenumber": range(1, int(pagenumber) + 1, 1) # needs to be range to be iterable on template
     }
     return render(request, template + "blog.html", blogdata)
 
 def blogpost(request, postnumber):
     data = {
         "postnumber": int(postnumber),
-        "post": Blogpost.objects.order_by('published_date')[int(postnumber)-1]
+        "post": Blogpost.objects.get(id=postnumber)
     }
     return render(request, template + 'blogpost.html', data)
+
+def blogsearch(request, characters):
+    searchresult = search.forblog(characters)
+    searchdata = {
+        "blogposts": searchresult,
+        "characters": characters,
+        "pagenumber": range(1, int(4)) # needs to be range to be iterable on template
+    }
+    return render(request, template + "blogsearch.html", searchdata)
 
 def faq(request):
     #project = Project.objects.get(pk=pk)
