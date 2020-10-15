@@ -42,7 +42,7 @@ def blog(request):
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
     blogdata = {
-        "blogposts": Blogpost.objects.order_by('published_date'),
+        "blogposts": Blogpost.objects.order_by('published_date').reverse(),
         "pagenumber": range(1, int(pagenumber) + 1, 1) # needs to be range to be iterable on template
     }
     return render(request, template + "blog.html", blogdata)
@@ -58,6 +58,7 @@ def blogsearch(request, characters):
     searchresult = search.forblog(characters)
     searchdata = {
         "blogposts": searchresult,
+        "searchcount": len(searchresult),
         "characters": characters,
         "pagenumber": range(1, int(4)) # needs to be range to be iterable on template
     }

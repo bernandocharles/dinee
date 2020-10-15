@@ -11,32 +11,38 @@
       <br>
       <br>
 
-      <div class="d-flex flex-row justify-content-between mb-5 align-items-center" id="blog-header">
-        <div class="col">
-          <h2 class="h2-title">{{ characters }}</h2>
+      <div class="d-flex flex-row justify-content-between mb-5 mt-5 align-items-center" id="blog-header">
+        <div class="col pl-0">
+          <h3 class="h2-title">Ditemukan {{ searchcount }} artikel terkait "{{ characters }}"</h3>
         </div>
         <div class="row col-6">
-          <div class="col-md-8">
+          <div class="col-md-9">
             <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">?</span>
+                <span class="input-group-text search-icon" id="basic-addon1">?</span>
               </div>
-              <input type="text" id="blog-search-form" class="form-control" placeholder="Cari Artikel..." aria-label="Cari Artikel..." aria-describedby="basic-addon1">
+              <input type="text" id="blog-search-form" class="form-control search-bar" placeholder="Cari artikel..." aria-label="Cari Artikel..." aria-describedby="basic-addon1">
             </div>
           </div>
-          <div class="col">
-            <h3>Kategori</h3>
+          <div class="col pr-0">
+            <div class="dropdown">
+              <h6 class="ml-3" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">Kategori &#9662; </h6>
+              <div class="dropdown-content">
+                <p>Tentang Restoran</p>
+                <p>Tentang Pelanggan</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       
-      {% if blogposts %}}
+      {% if blogposts %}
       <div class="row">
         {% for post in blogposts %}
           <div class="col-4" width='400px'>
             <img src="{% static 'img/classy.png' %}" width='378px' height='auto'>
             <h3>
-              <a href="{% url 'post' post.id %}">
+              <a href="{% url 'post' post.id %}" class="blog-link">
                 Post Number {{ post.id }} : {{ post.title }}
               </a>
             </h3>

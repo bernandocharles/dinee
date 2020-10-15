@@ -11,21 +11,27 @@
       <br>
       <br>
 
-      <div class="d-flex flex-row justify-content-between mb-5 align-items-center" id="blog-header">
-        <div class="col">
+      <div class="d-flex flex-row justify-content-between mb-5 mt-5 align-items-center" id="blog-header">
+        <div class="col pl-0">
           <h2 class="h2-title">Ada apa di dinee</h2>
         </div>
         <div class="row col-6">
-          <div class="col-md-8">
+          <div class="col-md-9">
             <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">?</span>
+                <span class="input-group-text search-icon">?</span>
               </div>
-              <input type="text" id="blog-search-form" class="form-control" placeholder="Cari Artikel..." aria-label="Cari Artikel..." aria-describedby="basic-addon1">
+              <input type="text" id="blog-search-form" class="form-control search-bar" placeholder="Cari artikel..." aria-label="Cari Artikel..." aria-describedby="basic-addon1">
             </div>
           </div>
-          <div class="col">
-            <h3>Kategori</h3>
+          <div class="col pr-0">
+            <div class="dropdown">
+              <h6 class="ml-3" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">Kategori &#9662; </h6>
+              <div class="dropdown-content">
+                <p>Tentang Restoran</p>
+                <p>Tentang Pelanggan</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -35,8 +41,8 @@
         <div class="blog-card col-6">
           <img src="{% static 'img/classy.png' %}" width='100%' height='auto'>
           <h3>
-            <a href="{% url 'post' 1 %}">
-              Post Number 1 : {{ blogposts.0.title }}
+            <a href="{% url 'post' blogposts.0.id %}" class="blog-link">
+              Latest : {{ blogposts.0.title }}
             </a>
           </h3>
           <p>Ac non facilisi pulvinar. Ut orci id a et, quis aliquet lorem magna. Vestibulum consequat quis aliquam dolor mi enim.</p>
@@ -51,7 +57,7 @@
               <img src="{% static 'img/classy.png' %}" width='100%'>
             </div>
             <div class="col-8">
-              <p>Post Number 2: {{ blogposts.1.title }}</p>
+              <a href="{% url 'post' blogposts.1.id %}" class="blog-link">Highlight 1 : {{ blogposts.1.title }}</a>
               <div class="row justify-content-between">
                 <p class="col">{{ blogposts.1.author }}</p>
                 <p class="text-lg-right col">{{ blogposts.1.published_date }}</p>
@@ -63,7 +69,7 @@
               <img src="{% static 'img/classy.png' %}" width='100%'>
             </div>
             <div class="col-8">
-              <p>Post Number 2: {{ blogposts.2.title }}</p>
+              <a href="{% url 'post' blogposts.2.id %}" class="blog-link">Highlight 2 : {{ blogposts.2.title }}</a>
               <div class="row justify-content-between">
                 <p class="col">{{ blogposts.2.author }}</p>
                 <p class="text-lg-right col">{{ blogposts.2.published_date }}</p>
@@ -75,7 +81,7 @@
               <img src="{% static 'img/classy.png' %}" width='100%'>
             </div>
             <div class="col-8">
-              <p>Post Number 2: {{ blogposts.3.title }}</p>
+              <a href="{% url 'post' blogposts.3.id %}" class="blog-link">Highlight 3 : {{ blogposts.3.title }}</a>
               <div class="row justify-content-between">
                 <p class="col">{{ blogposts.3.author }}</p>
                 <p class="text-lg-right col">{{ blogposts.3.published_date }}</p>
@@ -87,10 +93,11 @@
 
       <div class="row">
         {% for post in blogposts %}
+          {% if forloop.counter > 4 %}
           <div class="col-4" width='400px'>
             <img src="{% static 'img/classy.png' %}" width='378px' height='auto'>
             <h3>
-              <a href="{% url 'post' post.id %}">
+              <a href="{% url 'post' post.id %}" class="blog-link">
                 Post Number {{ post.id }} : {{ post.title }}
               </a>
             </h3>
@@ -100,6 +107,7 @@
               <p class="text-lg-right col">{{ post.published_date }}</p>
             </div>
           </div>
+          {% endif %}
           <!-- <p>{{ post }}</p> -->
         {% endfor %}
       </div>
