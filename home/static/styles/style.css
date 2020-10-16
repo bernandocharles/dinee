@@ -54,7 +54,7 @@ li.easy-way-li::marker {
 .blog-link {
   color: black;
   font-family: 'Raleway', 'sans-serif';
-  font-weight: 800;
+  font-weight: 800!important;
 
 }
 
@@ -125,6 +125,12 @@ li.easy-way-li::marker {
 
 .generic-black-text {
   color: #000000;
+}
+
+.glass-icon {
+  color: #E94924;
+  max-width: 14px;
+  height: auto;
 }
 
 .h2-title {
