@@ -13,7 +13,13 @@
 
       <div class="d-flex flex-row justify-content-between mb-5 mt-5 align-items-center" id="blog-header">
         <div class="col pl-0">
+          {% if category == 'pelanggan' %}
+          <h2 class="h2-title">Tentang Pelanggan</h2>
+          {% else if category == 'restoran' %}
+          <h2 class="h2-title">Tentang Restoran</h2>
+          {% else %}
           <h2 class="h2-title">Ada apa di dinee</h2>
+          {% endif %}
         </div>
         <div class="row col-6">
           <div class="col-md-9">

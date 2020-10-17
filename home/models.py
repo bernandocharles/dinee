@@ -15,3 +15,11 @@ class Blogpost(models.Model):
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
   published_date = models.DateTimeField('date published')
+
+class Question(models.Model):
+  question = models.CharField(max_length=200)
+  answer = models.TextField()
+  category = models.CharField(max_length=200, default='pelanggan')
+
+  created_at = models.DateTimeField(auto_now_add=True)
+  updated_at = models.DateTimeField(auto_now=True)

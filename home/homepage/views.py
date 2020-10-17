@@ -80,6 +80,11 @@ def faq(request):
     #context = {"project": project}
     return render(request, template + "faq.html")
 
+def faqsearch(request, characters):
+    #project = Project.objects.get(pk=pk)
+    #context = {"project": project}
+    return render(request, template + "faq.html")
+
 def jsontest(request):
     testdata = {
         "foo": "bar",
