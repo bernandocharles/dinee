@@ -43,7 +43,18 @@ def blog(request):
     #context = {"project": project}
     blogdata = {
         "blogposts": Blogpost.objects.order_by('published_date').reverse(),
-        "pagenumber": range(1, int(pagenumber) + 1, 1) # needs to be range to be iterable on template
+        "pagenumber": range(1, int(pagenumber) + 1, 1), # needs to be range to be iterable on template
+        "category": 'else'
+    }
+    return render(request, template + "blog.html", blogdata)
+
+def blogcategory(request, category):
+    #project = Project.objects.get(pk=pk)
+    #context = {"project": project}
+    blogdata = {
+        "blogposts": Blogpost.objects.order_by('published_date').reverse(),
+        "pagenumber": range(1, int(pagenumber) + 1, 1), # needs to be range to be iterable on template
+        "category": category
     }
     return render(request, template + "blog.html", blogdata)
 

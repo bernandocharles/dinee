@@ -10,7 +10,8 @@ class Blogpost(models.Model):
   summary = models.TextField()
   image = models.CharField(max_length=200)
   author = models.CharField(max_length=200, default="dineeAdmin")
-  
+  category = models.CharField(max_length=200, default="pelanggan")
+
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
   published_date = models.DateTimeField('date published')

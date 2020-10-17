@@ -103,6 +103,7 @@
         {% for post in blogposts %}
           {% if forloop.counter > 4 %}
           <div class="col-4" >
+            <p>{{ post.category }}</p>
             <a href="{% url 'post' post.id %}">
               <img src="{% static 'img/classy.png' %}" width='100%' height='auto'>
             </a>
