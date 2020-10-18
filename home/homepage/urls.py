@@ -12,5 +12,6 @@ urlpatterns = [
     path('faq/', views.faq, name='faq'),
     path('faq/<characters>', views.faqsearch, name='faqsearch'),
     path('post/<postnumber>', views.blogpost, name='post'),
-    path('getuser/<userid>', views.getuser, name='getuser')
+    path('syarat-ketentuan/', views.syarat, name='syarat'),
+    path('kebijakan-privasi/', views.privasi, name='privasi')
 ]

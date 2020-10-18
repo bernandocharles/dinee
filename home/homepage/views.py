@@ -85,19 +85,8 @@ def faqsearch(request, characters):
     #context = {"project": project}
     return render(request, template + "faq.html")
 
-def jsontest(request):
-    testdata = {
-        "foo": "bar",
-        "FU": "BAR"
-    }
-    return JsonResponse(testdata)
+def syarat(request):
+    return render(request, template + "syarat.html")
 
-def getuser(request, userid):
-    user = User.objects.get(id=userid)
-    print(user.__dict__)
-    print("Knock knock console.")
-
-    return JsonResponse({
-        "username": user.username,
-        "id": user.id
-    })
+def privasi(request):
+    return render(request, template + "privasi.html")
