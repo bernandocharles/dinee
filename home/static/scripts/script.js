@@ -2,6 +2,7 @@
 let navbarLight = document.getElementById("nav-bar-light");
 let navbarDark = document.getElementById("nav-bar-dark");
 let blogSearch = document.getElementById("blog-search-form");
+let questionSearch = document.getElementById("faq-search-form");
 let siteUrl = "http://127.0.0.1:8000"
 
 // Change navbar on scroll
@@ -40,12 +41,40 @@ window.onscroll = function() {
 }
 
 // Search function event
-blogSearch.addEventListener("keydown", function (event) {
-  console.log("script search jalan");
+
+document.addEventListener("keydown", function (event) {
   if (event.keyCode == 13) {
-    window.location.href = siteUrl + `/blog/search/${blogSearch.value}`;
-  };
+    if (questionSearch) {
+      window.location.href = siteUrl + `/faq/${questionSearch.value}`;
+    }
+    else if (blogSearch) {
+      window.location.href = siteUrl + `/blog/search/${blogSearch.value}`;
+    }
+    else {
+      console.log("nothing to search...")
+    }
+  }
 })
+
+// questionSearch.addEventListener("keydown", function (event) {
+//   console.log("faq search jalan");
+//   if (event.keyCode == 13 && questionSearch) {
+//     window.location.href = siteUrl + `/faq/${questionSearch.value}`;
+//   }
+//   else {
+//     console.log('question form is null, aborting search...')
+//   };
+// })
+
+// blogSearch.addEventListener("keydown", function (event) {
+//   console.log("script search jalan");
+//   if (event.keyCode == 13 && blogSearch) {
+//     window.location.href = siteUrl + `/blog/search/${blogSearch.value}`;
+//   }
+//   else {
+//     console.log('blog form is null, aborting search...')
+//   };
+// })
 
 // Fade-in / Fade-out animation
 

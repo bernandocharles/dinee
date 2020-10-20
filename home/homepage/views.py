@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.contrib.auth.models import User
 from home.homepage import search
 from home.models import Blogpost
+from home.models import Question
 ##from utils import utils
 
 template = 'home/homepage/'
@@ -76,14 +77,19 @@ def blogsearch(request, characters):
     return render(request, template + "blogsearch.html", searchdata)
 
 def faq(request):
+    faqdata = {
+        "restoran": search.faqrestoran(),
+        "pelanggan": search.faqpelanggan()
+    }
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
-    return render(request, template + "faq.html")
+    return render(request, template + "faq.html", faqdata)
 
 def faqsearch(request, characters):
+    searchdata = search.forfaq(characters)
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
-    return render(request, template + "faq.html")
+    return render(request, template + "faq.html", searchdata)
 
 def syarat(request):
     return render(request, template + "syarat.html")
