@@ -11,13 +11,13 @@
       <br>
       <br>
 
-      <div class="d-flex flex-row justify-content-between mb-5 mt-5 align-items-center" id="blog-header">
-        <div class="col pl-0">
+      <div class="d-flex flex-column col-12 flex-md-row justify-content-between mb-5 mt-5 align-items-center" id="blog-header">
+        <div class="col col-12 col-md-6 pl-md-0 my-4 my-md-auto">
           
-          <h2 class="h2-title">Ada apa di dinee</h2>
+          <h2 class="h2-title text-center text-md-left">Ada apa di dinee</h2>
           
         </div>
-        <div class="row col-6">
+        <div class="row col-12 col-md-6">
           <div class="col-md-9">
             <div class="input-group">
               <div class="input-group-prepend">
@@ -26,8 +26,8 @@
               <input type="text" id="blog-search-form" class="form-control search-bar" placeholder="Cari artikel..." aria-label="Cari Artikel..." aria-describedby="basic-addon1">
             </div>
           </div>
-          <div class="col pr-0">
-            <div class="dropdown">
+          <div class="col pr-0 my-4 my-md-auto d-flex flex-row justify-content-center">
+            <div class="dropdown mx-auto px-auto">
               <h6 class="ml-3" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">Kategori &#9662; </h6>
               <div class="dropdown-content">
                 <a class="cat-link" href="{% url 'blogrestoran' %}">Tentang Restoran</a>
@@ -39,23 +39,23 @@
       </div>
       
 
-      <div class="row mb-2" id="blog-highlight">
-        <div class="blog-card col-6">
+      <div class="row flex-sm-column flex-md-row mb-2" id="blog-highlight">
+        <div class="blog-card col-sm-12 col-md-6 flex-column mb-5 mb-md-1 justify-content-between">
           <a href="{% url 'post' blogposts.0.id %}">
             <img src="{% static 'img/classy.png' %}" width='100%' height='auto'>
           </a>
           <h3 class="my-3">
             <a href="{% url 'post' blogposts.0.id %}" class="blog-link">
-              Latest : {{ blogposts.0.title }}
+              {{ blogposts.0.title }}
             </a>
           </h3>
           <p>Ac non facilisi pulvinar. Ut orci id a et, quis aliquet lorem magna. Vestibulum consequat quis aliquam dolor mi enim.</p>
           <div class="row justify-content-between">
-            <p class="col">{{ blogposts.0.author }}</p>
-            <p class="text-lg-right col">{{ blogposts.0.published_date }}</p>
+            <p class="col mb-0 pb-0">{{ blogposts.0.author }}</p>
+            <p class="text-right col mb-0 pb-0">{{ blogposts.0.published_date|date:"d F Y"  }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-sm-12 col-md-6 pl-1 pl-md-3 px-md-auto mx-md-auto">
           <div class="row mb-4">
             <div class="col-6">
               <a href="{% url 'post' blogposts.1.id %}">
@@ -63,10 +63,10 @@
               </a>
             </div>
             <div class="col-6 px-0 mx-0">
-              <a href="{% url 'post' blogposts.1.id %}" class="blog-link mb-5"><h5 style="font-weight: 800;">Highlight 1 : {{ blogposts.1.title }}</h5></a>
+              <a href="{% url 'post' blogposts.1.id %}" class="blog-link mb-5"><h5 style="font-weight: 800;">{{ blogposts.1.title }}</h5></a>
               <div class="row justify-content-between mt-5">
                 <p class="col-4">{{ blogposts.1.author }}</p>
-                <p class="text-lg-right col">{{ blogposts.1.published_date }}</p>
+                <p class="text-right col">{{ blogposts.1.published_date|date:"d F Y"  }}</p>
               </div>
             </div>
           </div>
@@ -77,10 +77,10 @@
               </a>
             </div>
             <div class="col-6 px-0 mx-0">
-              <a href="{% url 'post' blogposts.2.id %}" class="blog-link mb-5"><h5 style="font-weight: 800;">Highlight 2 : {{ blogposts.2.title }}</h5></a>
+              <a href="{% url 'post' blogposts.2.id %}" class="blog-link mb-5"><h5 style="font-weight: 800;">{{ blogposts.2.title }}</h5></a>
               <div class="row justify-content-between mt-5">
                 <p class="col-4">{{ blogposts.2.author }}</p>
-                <p class="text-lg-right col">{{ blogposts.2.published_date }}</p>
+                <p class="text-right col">{{ blogposts.2.published_date|date:"d F Y"  }}</p>
               </div>
             </div>
           </div>
@@ -91,10 +91,10 @@
               </a>
             </div>
             <div class="col-6 px-0 mx-0">
-              <a href="{% url 'post' blogposts.3.id %}" class="blog-link mb-5"><h5 style="font-weight: 800;">Highlight 3 : {{ blogposts.3.title }}</h5></a>
+              <a href="{% url 'post' blogposts.3.id %}" class="blog-link mb-5"><h5 style="font-weight: 800;">{{ blogposts.3.title }}</h5></a>
               <div class="row justify-content-between mt-5">
                 <p class="col-4">{{ blogposts.3.author }}</p>
-                <p class="text-lg-right col">{{ blogposts.3.published_date }}</p>
+                <p class="text-right col">{{ blogposts.3.published_date|date:"d F Y"  }}</p>
               </div>
             </div>
           </div>
@@ -104,19 +104,19 @@
       <div class="row mt-5">
         {% for post in blogposts %}
           {% if forloop.counter > 4 %}
-          <div class="col-4" >
-            <p>{{ post.category }}</p>
+          <div class="col-12 col-md-4" >
+            <!-- <p>{{ post.category }}</p> -->
             <a href="{% url 'post' post.id %}">
-              <img src="{% static 'img/classy.png' %}" width='100%' height='auto'>
+              <img src="{{ post.image }}" width='100%' height='auto'>
             </a>
             <h4 class="my-3">
               <a href="{% url 'post' post.id %}" class="blog-link">
-                Post Number {{ post.id }} : {{ post.title }}
+                {{ post.title }}
               </a>
             </h4>
             <div class="row justify-content-between mt-4">
               <p class="col">{{ post.author }}</p>
-              <p class="text-lg-left col">{{ post.published_date }}</p>
+              <p class="text-right col">{{ post.published_date|date:"d F Y"  }}</p>
             </div>
           </div>
           {% endif %}

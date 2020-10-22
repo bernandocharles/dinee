@@ -13,13 +13,13 @@
     <div class="col-md-8 blog-main">
 
       <div class="blog-post">
-        <h1 class="blog-post-title" style="color: #000000;">{{ post.title }}</h1>
+        <h1 class="blog-post-title" style="color: #000000; font-weight: 800;">{{ post.title }}</h1>
         
         <p class="my-4" style="color: #52575C;">{{ post.summary }}</p>
         <!-- <p class="blog-post-meta my-4" style="color: #000000; font-weight: 300;">{{ post.published_date }} by {{ post.author }}</p> -->
         <div class="row justify-content-between mt-4 mb-2" style="color: #000000; font-weight: 300;">
           <p class="col-4">{{ post.author }}</p>
-          <p class="text-lg-right col">{{ post.published_date }}</p>
+          <p class="text-right col">{{ post.published_date|date:"d F Y"  }}</p>
         </div>
         <img src="{{ post.image }}" width="100%">
         <br>

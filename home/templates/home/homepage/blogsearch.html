@@ -11,15 +11,15 @@
       <br>
       <br>
 
-      <div class="d-flex flex-row justify-content-between mb-5 mt-5 align-items-center" id="blog-header">
-        <div class="col pl-0">
+      <div class="d-flex flex-column col-12 flex-md-row justify-content-between mb-5 mt-5 align-items-center" id="blog-header">
+        <div class="col col-12 col-md-6 pl-md-0 my-4 my-md-auto">
           {% if category %}
-            <h3 class="h2-title">{{ category }}</h3>
+            <h3 class="h2-title text-center text-md-left">{{ category }}</h3>
           {% else %}
-            <h3 class="h2-title">Ditemukan {{ searchcount }} artikel terkait "{{ characters }}"</h3>
+            <h3 class="h2-title text-center text-md-left">Ditemukan {{ searchcount }} artikel terkait "{{ characters }}"</h3>
           {% endif %}
         </div>
-        <div class="row col-6">
+        <div class="row col-12 col-md-6">
           <div class="col-md-9">
             <div class="input-group">
               <div class="input-group-prepend">
@@ -28,8 +28,8 @@
               <input type="text" id="blog-search-form" class="form-control search-bar" placeholder="Cari artikel..." aria-label="Cari Artikel..." aria-describedby="basic-addon1">
             </div>
           </div>
-          <div class="col pr-0">
-            <div class="dropdown">
+          <div class="col pr-0 pr-0 my-4 my-md-auto d-flex flex-row justify-content-center">
+            <div class="dropdown mx-auto px-auto">
               <h6 class="ml-3" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">Kategori &#9662; </h6>
               <div class="dropdown-content">
                 <a class="cat-link" href="{% url 'blogrestoran' %}">Tentang Restoran</a>
@@ -43,17 +43,17 @@
       {% if blogposts %}
       <div class="row">
         {% for post in blogposts %}
-          <div class="col-4" width='400px'>
-            <img src="{% static 'img/classy.png' %}" width='378px' height='auto'>
-            <h3>
+          <div class="col-12 col-md-4" width='400px'>
+            <img src="{{ post.image }}" width='100%' height='auto'>
+            <h4>
               <a href="{% url 'post' post.id %}" class="blog-link">
-                Post Number {{ post.id }} : {{ post.title }}
+                {{ post.title }}
               </a>
-            </h3>
+            </h4>
             <p>Ac non facilisi pulvinar. Ut orci id a et, quis aliquet lorem magna. Vestibulum consequat quis aliquam dolor mi enim.</p>
             <div class="row justify-content-between">
               <p class="col">{{ post.author }}</p>
-              <p class="text-lg-right col">{{ post.published_date }}</p>
+              <p class="text-right col">{{ post.published_date|date:"d F Y" }}</p>
             </div>
           </div>
         {% endfor %}
@@ -61,11 +61,11 @@
 
       {% elif characters %}
 
-      <h2> Hasil pencarian tidak ditemukan untuk "{{ characters }}"</h2>
+      <h2 class="text-center py-5"> Hasil pencarian tidak ditemukan untuk "{{ characters }}"</h2>
 
       {% else %}
 
-      <h2> Hasil pencarian tidak ditemukan untuk "{{ category }}"</h2>
+      <h2 class="text-center py-5"> Hasil pencarian tidak ditemukan untuk "{{ category }}"</h2>
 
       {% endif %}
 

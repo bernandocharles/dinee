@@ -5,8 +5,8 @@
 
 <!-- Light navbar -->
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-bg-light bg-light" id="nav-bar-light">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light py-3 navbar-bg-light bg-light" id="nav-bar-light">
+    <div class="container d-flex flex-row flex-md-row justify-content-between">
         <b><a class="navbar-brand logo" href="{% url 'homepage' %}"><img src="{% static 'img/Dinee_Logo_Red.png' %}" width="90" height="auto"></a></b>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -36,8 +36,8 @@
 
 <!-- Black navbar -->
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-bg-dark" id="nav-bar-dark" style="display: none;">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark py-3 navbar-bg-dark" id="nav-bar-dark" style="display: none;">
+  <div class="container d-flex flex-row flex-md-row justify-content-between">
       <b><a class="navbar-brand logo" href="{% url 'homepage' %}"><img src="{% static 'img/Dinee_Logo_White.png' %}" width="90" height="auto"></a></b>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -177,7 +177,7 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center pt-3" style="color: white;">© 2020 
+  <div class="footer-copyright text-center pt-3" style="color: white;">© {% now "Y" %}
     PT Kresna Teknologi Indonesia
   </div>
   <!-- Copyright -->
