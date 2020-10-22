@@ -5,6 +5,10 @@ def forblog(characters):
   result = Blogpost.objects.filter(content__contains=characters)
   return result
 
+def blogcategory(cat):
+  result = Blogpost.objects.filter(category=cat)
+  return result
+
 def faqrestoran():
   result = Question.objects.filter(category='restoran')
   return result

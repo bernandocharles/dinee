@@ -78,6 +78,15 @@ li.easy-way-li::marker {
   margin-bottom: 23px;
 }
 
+.cat-link {
+  color: #E94924!important;
+}
+
+.cat-link:hover {
+  color: #E94924!important;
+  text-decoration: underline;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -136,6 +145,10 @@ li.easy-way-li::marker {
 .h2-title {
   font-weight: 800!important;
   letter-spacing: 0.02em;
+}
+
+.line-break {
+  border-top: 1px solid #000000;
 }
 
 .logo {

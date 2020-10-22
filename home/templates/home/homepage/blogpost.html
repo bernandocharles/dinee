@@ -13,14 +13,23 @@
     <div class="col-md-8 blog-main">
 
       <div class="blog-post">
-        <h2 class="blog-post-title">Post number {{ postnumber }}: {{ post.title }}</h2>
-        <p class="blog-post-meta">{{ post.published_date }} by <a href="#">{{ post.author }}</a></p>
-
-        <p>{{ post.summary }}</p>
-        <hr>
+        <h1 class="blog-post-title" style="color: #000000;">{{ post.title }}</h1>
+        
+        <p class="my-4" style="color: #52575C;">{{ post.summary }}</p>
+        <!-- <p class="blog-post-meta my-4" style="color: #000000; font-weight: 300;">{{ post.published_date }} by {{ post.author }}</p> -->
+        <div class="row justify-content-between mt-4 mb-2" style="color: #000000; font-weight: 300;">
+          <p class="col-4">{{ post.author }}</p>
+          <p class="text-lg-right col">{{ post.published_date }}</p>
+        </div>
         <img src="{{ post.image }}" width="100%">
         <br>
-        {{ post.content|safe }}
+        <div style="color: #52575C;">
+          {{ post.content|safe }}
+        </div>
+        <br class="mb-5">
+        <hr class="line-break">
+        <p style="color: #000000; font-family: 'Raleway', 'sans-serif'; font-weight: 300;">Bagikan artikel ini:</p>
+        <br>
 
         <!-- <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
         <blockquote>

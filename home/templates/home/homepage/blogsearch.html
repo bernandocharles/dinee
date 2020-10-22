@@ -13,7 +13,11 @@
 
       <div class="d-flex flex-row justify-content-between mb-5 mt-5 align-items-center" id="blog-header">
         <div class="col pl-0">
-          <h3 class="h2-title">Ditemukan {{ searchcount }} artikel terkait "{{ characters }}"</h3>
+          {% if category %}
+            <h3 class="h2-title">{{ category }}</h3>
+          {% else %}
+            <h3 class="h2-title">Ditemukan {{ searchcount }} artikel terkait "{{ characters }}"</h3>
+          {% endif %}
         </div>
         <div class="row col-6">
           <div class="col-md-9">
@@ -28,8 +32,8 @@
             <div class="dropdown">
               <h6 class="ml-3" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">Kategori &#9662; </h6>
               <div class="dropdown-content">
-                <p>Tentang Restoran</p>
-                <p>Tentang Pelanggan</p>
+                <a class="cat-link" href="{% url 'blogrestoran' %}">Tentang Restoran</a>
+                <a class="cat-link" href="{% url 'blogpelanggan' %}">Tentang Pelanggan</a>
               </div>
             </div>
           </div>
@@ -55,9 +59,13 @@
         {% endfor %}
       </div>
 
-      {% else %}
+      {% elif characters %}
 
       <h2> Hasil pencarian tidak ditemukan untuk "{{ characters }}"</h2>
+
+      {% else %}
+
+      <h2> Hasil pencarian tidak ditemukan untuk "{{ category }}"</h2>
 
       {% endif %}
 
