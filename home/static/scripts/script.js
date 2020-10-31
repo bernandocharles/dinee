@@ -44,38 +44,30 @@ window.onscroll = function() {
 
 // Navbar active toggle
 
-for (let i = 0; i < navItems.length; i++) {
-  navItems[i].onclick = function (event) {
-    let hightlight = event.target;
-    for (let sibling of this.parentNode.children) {
-      sibling.classList.remove("active");
-    }
-    hightlight.classList.add("active")
-  }
-}
+// for (let i = 0; i < navItems.length; i++) {
+//   navItems[i].onclick = function (event) {
+//     let hightlight = event.target;
+//     for (let sibling of this.parentNode.children) {
+//       sibling.classList.remove("active");
+//     }
+//     hightlight.classList.add("active")
+//   }
+// }
 
 // Clickable list on homepage -- Easy Way to Use Dinee
 
-let listItems = easyWayList.getElementsByClassName("easy-way-li")
 
-for (let i = 0; i < listItems.length; i++) {
-  listItems[i].onclick = function (event) {
-    let highlight = event.target;
-    for (let sibling of this.parentNode.children) {
-      sibling.classList.remove("active");
+if (easyWayList) {
+  let listItems = easyWayList.getElementsByClassName("easy-way-li")
+  for (let i = 0; i < listItems.length; i++) {
+    listItems[i].onclick = function (event) {
+      let highlight = event.target;
+      for (let sibling of this.parentNode.children) {
+        sibling.classList.remove("active");
+      }
+      highlight.classList.add("active")
     }
-    highlight.classList.add("active")
   }
-}
-
-// Toggle active function event
-
-function toggleActive (event) {
-  let highlight = event.target;
-  for (let sibling of this.parentNode.children) {
-    sibling.classList.remove("active");
-  }
-  highlight.classList.add("active")
 }
 
 
