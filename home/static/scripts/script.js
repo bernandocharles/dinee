@@ -1,8 +1,10 @@
 
 let navbarLight = document.getElementById("nav-bar-light");
 let navbarDark = document.getElementById("nav-bar-dark");
+let navItems = document.getElementsByClassName("nav-item");
 let blogSearch = document.getElementById("blog-search-form");
 let questionSearch = document.getElementById("faq-search-form");
+let easyWayList = document.getElementById("easy-way-ol");
 let siteUrl = "http://127.0.0.1:8000"
 
 // Change navbar on scroll
@@ -39,6 +41,43 @@ window.onscroll = function() {
   scrollFunction()
   scrolled = true;
 }
+
+// Navbar active toggle
+
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].onclick = function (event) {
+    let hightlight = event.target;
+    for (let sibling of this.parentNode.children) {
+      sibling.classList.remove("active");
+    }
+    hightlight.classList.add("active")
+  }
+}
+
+// Clickable list on homepage -- Easy Way to Use Dinee
+
+let listItems = easyWayList.getElementsByClassName("easy-way-li")
+
+for (let i = 0; i < listItems.length; i++) {
+  listItems[i].onclick = function (event) {
+    let highlight = event.target;
+    for (let sibling of this.parentNode.children) {
+      sibling.classList.remove("active");
+    }
+    highlight.classList.add("active")
+  }
+}
+
+// Toggle active function event
+
+function toggleActive (event) {
+  let highlight = event.target;
+  for (let sibling of this.parentNode.children) {
+    sibling.classList.remove("active");
+  }
+  highlight.classList.add("active")
+}
+
 
 // Search function event
 

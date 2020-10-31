@@ -113,8 +113,80 @@ li.easy-way-li::marker {
   padding: 2vw;
   padding-left: 1vw;
 
+  text-align: left!important;
+  display: flex!important;
+
   color: black;
   line-height: 23px;
+
+  width: 95vw;
+  height: 130px;
+
+  word-wrap: break-word;
+
+  border-radius: 16px;
+}
+
+.easy-way-li:active {
+  background-color: #E94924;
+  color: white;
+}
+
+.easy-way-li:hover {
+  background-color: #E94924;
+  color: white;
+  cursor: pointer;
+}
+
+.easy-way-li:focus {
+  background-color: #E94924;
+  color: white;
+}
+
+.easy-way-li.active {
+  background-color: #E94924;
+  color: white;
+}
+
+.easy-way-li .number {
+  width: 38px;
+  height: 38px;
+  line-height: 30px;
+  text-align: center;
+
+  background-color: #E94924;
+  color: white;
+  border-radius: 50%;
+
+  font-family: 'Raleway', 'sans-serif';
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.easy-way-li:hover .number {
+  background-color: white;
+  color: #E94924;
+  cursor: pointer;
+}
+
+.easy-way-li:focus .number {
+  background-color: white;
+  color: #E94924;
+}
+
+.easy-way-li.active .number {
+  background-color: white;
+  color: #E94924;
+}
+
+.easy-way-header {
+  font-size: 1.1em;
+  word-wrap: break-word;
+}
+
+.easy-way-text {
+  font-size: 1em;
+  word-wrap: break-word;
 }
 
 .footer-text {
@@ -278,6 +350,10 @@ background-color: transparent;
   background-color: #E94924;
 }
 
+#footer-column-1 {
+  padding-left: 20vw;
+}
+
 #homepage-ol {
   padding: 62px;
 }
@@ -353,6 +429,25 @@ background-color: transparent;
     margin-bottom: 5px;
 
     letter-spacing: 0.02em;
+  }
+
+  .easy-way-li {
+    width: 40vw;
+  }
+
+  .easy-way-li .number {
+    width: 48px;
+    height: 48px;
+    line-height: 40px;
+    text-align: center;
+  
+    background-color: #E94924;
+    color: white;
+    border-radius: 50%;
+  
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 36px;
+    font-weight: 500;
   }
 
   .navbar li {

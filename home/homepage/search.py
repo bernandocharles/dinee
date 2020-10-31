@@ -25,6 +25,7 @@ def forfaq(characters):
     "restoran": restoran,
     "searching": True,
     "searchcount": len(pelanggan) + len(restoran),
-    "characters": characters
+    "characters": characters,
+    "faq": True
   }
   return result

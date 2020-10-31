@@ -3,6 +3,11 @@
 
 {% block page_content %}
 
+<meta property="og:url"                content="{% url 'post' post.id %}" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="{{ post.title }}" />
+<meta property="og:description"        content="{{ post.subtitle }}" />
+<meta property="og:image"              content="{{ post.image }}" />
 
 <main role="main" class="container">
   <br>
@@ -28,7 +33,17 @@
         </div>
         <br class="mb-5">
         <hr class="line-break">
-        <p style="color: #000000; font-family: 'Raleway', 'sans-serif'; font-weight: 300;">Bagikan artikel ini:</p>
+        <div class="d-flex flex-row justify-content-between">
+          <p style="color: #000000; font-family: 'Raleway', 'sans-serif'; font-weight: 300;">Bagikan artikel ini:</p>
+          <div>
+            <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/post/{{post.id}}&text=Dinee%20Blog%20Post" data-show-count="false">
+              <img src="{% static 'img/twitter.png' %}" width="38px"></a>
+            <a href="">
+              <img src="{% static 'img/fb.png' %}" width="38px"></a>
+            <a href="">
+              <img src="{% static 'img/linkedin.png' %}" width="38px"></a>
+          </div>
+        </div>
         <br>
 
         <!-- <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
@@ -91,5 +106,5 @@
 
 </main><!-- /.container -->
 
-
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {% endblock %}

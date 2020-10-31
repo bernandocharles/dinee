@@ -27,12 +27,18 @@ pagenumber = len(Blogpost.objects.order_by('published_date')) / 12 + 1
 def homepage(request):
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
-    return render(request, template + "homepage.html")
+    data = {
+        "homepage": True
+    }
+    return render(request, template + "homepage.html", data)
 
 def aboutus(request):
+    data = {
+        "aboutus": True
+    }
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
-    return render(request, template + "aboutus.html")
+    return render(request, template + "aboutus.html", data)
 
 def services(request):
     #project = Project.objects.get(pk=pk)
@@ -45,14 +51,16 @@ def blog(request):
     blogdata = {
         "blogposts": Blogpost.objects.order_by('published_date').reverse(),
         "pagenumber": range(1, int(pagenumber) + 1, 1), # needs to be range to be iterable on template
-        "category": 'else'
+        "category": 'else',
+        "blog": True
     }
     return render(request, template + "blog.html", blogdata)
 
 def blogpost(request, postnumber):
     data = {
         "postnumber": int(postnumber),
-        "post": Blogpost.objects.get(id=postnumber)
+        "post": Blogpost.objects.get(id=postnumber),
+        "blog": True
     }
     return render(request, template + 'blogpost.html', data)
 
@@ -63,7 +71,8 @@ def blogsearch(request, characters):
         "blogposts": searchresult,
         "searchcount": len(searchresult),
         "characters": characters,
-        "pagenumber": range(1, int(pages) + 1, 1) # needs to be range to be iterable on template
+        "pagenumber": range(1, int(pages) + 1, 1), # needs to be range to be iterable on template
+        "blog": True
     }
     return render(request, template + "blogsearch.html", searchdata)
 
@@ -73,7 +82,8 @@ def blogrestoran(request):
     searchdata = {
         "blogposts": searchresult,
         "category": 'Tentang Restoran',
-        "pagenumber": range(1, int(pages) + 1, 1)
+        "pagenumber": range(1, int(pages) + 1, 1),
+        "blog": True
     }
     return render(request, template + "blogsearch.html", searchdata)
 
@@ -83,14 +93,16 @@ def blogpelanggan(request):
     searchdata = {
         "blogposts": searchresult,
         "category": 'Tentang Pelanggan',
-        "pagenumber": range(1, int(pages) + 1, 1)
+        "pagenumber": range(1, int(pages) + 1, 1),
+        "blog": True
     }
     return render(request, template + "blogsearch.html", searchdata)
 
 def faq(request):
     faqdata = {
         "restoran": search.faqrestoran(),
-        "pelanggan": search.faqpelanggan()
+        "pelanggan": search.faqpelanggan(),
+        "faq": True
     }
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
