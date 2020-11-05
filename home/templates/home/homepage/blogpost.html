@@ -46,63 +46,83 @@
         </div>
         <br>
 
-        <!-- <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-        <blockquote>
-          <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-        </blockquote>
-        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-        <h2>Heading</h2>
-        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <h3>Sub-heading</h3>
-        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        <pre><code>Example code block</code></pre>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-        <h3>Sub-heading</h3>
-        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <ul>
-          <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-          <li>Donec id elit non mi porta gravida at eget metus.</li>
-          <li>Nulla vitae elit libero, a pharetra augue.</li>
-        </ul>
-        <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-        <ol>
-          <li>Vestibulum id ligula porta felis euismod semper.</li>
-          <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-          <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-        </ol>
-        <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-      </div>
-
-      <div class="blog-post">
-        <h2 class="blog-post-title">Another blog post</h2>
-        <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
-
-        <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-        <blockquote>
-          <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-        </blockquote>
-        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-      </div>
-
-      <div class="blog-post">
-        <h2 class="blog-post-title">New feature</h2>
-        <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-
-        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <ul>
-          <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-          <li>Donec id elit non mi porta gravida at eget metus.</li>
-          <li>Nulla vitae elit libero, a pharetra augue.</li>
-        </ul>
-        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-        <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-      </div> -->
-
-
     </div><!-- /.blog-main -->
 
   </div><!-- /.row -->
+
+  <!-- Blog recommendations -->
+  <div class="col-md-12 p-0">
+    <div>
+        <div class="d-flex flex-row justify-content-between mb-5 align-items-center">
+        <h2 class="text-lg-left" style="color: #e94924;">Baca Artikel Lain</h2>
+        </div>
+        <div class="col">
+          <!-- Row 1 -->
+          <div class="row flex-nowrap justify-content-between py-md-4">
+            <div class="row mb-4 col-md-6">
+              <div class="col-6">
+                <a href="{% url 'post' recommendation.0.id %}">
+                  <img src="{{ recommendation.0.image }}" href="{% url 'post' recommendation.0.id %}" width='95%'>
+                </a>
+              </div>
+              <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
+                <a href="{% url 'post' recommendation.0.id %}" class="blog-link"><h5 style="font-weight: 800;">{{ recommendation.0.title }}</h5></a>
+                <div class="row justify-content-between">
+                  <p class="col-4 mb-0">{{ recommendation.0.author }}</p>
+                  <p class="text-right col mb-0">{{ recommendation.0.published_date|date:"d F Y" }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4 col-md-6">
+              <div class="col-6">
+                <a href="{% url 'post' recommendation.1.id %}">
+                  <img src="{{ recommendation.1.image }}" href="{% url 'post' recommendation.1.id %}" width='95%'>
+                </a>
+              </div>
+              <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
+                <a href="{% url 'post' recommendation.1.id %}" class="blog-link"><h5 style="font-weight: 800;">{{ recommendation.1.title }}</h5></a>
+                <div class="row justify-content-between">
+                  <p class="col-4 mb-0">{{ recommendation.1.author }}</p>
+                  <p class="text-right col mb-0">{{ recommendation.1.published_date|date:"d F Y" }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="row flex-nowrap justify-content-between py-md-4">
+            <div class="row mb-4 col-md-6">
+              <div class="col-6">
+                <a href="{% url 'post' recommendation.2.id %}">
+                  <img src="{{ recommendation.2.image }}" href="{% url 'post' recommendation.2.id %}" width='95%'>
+                </a>
+              </div>
+              <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
+                <a href="{% url 'post' recommendation.2.id %}" class="blog-link"><h5 style="font-weight: 800;">{{ recommendation.2.title }}</h5></a>
+                <div class="row justify-content-between">
+                  <p class="col-4 mb-0">{{ recommendation.2.author }}</p>
+                  <p class="text-right col mb-0">{{ recommendation.2.published_date|date:"d F Y" }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4 col-md-6">
+              <div class="col-6">
+                <a href="{% url 'post' recommendation.3.id %}">
+                  <img src="{{ recommendation.3.image }}" href="{% url 'post' recommendation.3.id %}" width='95%'>
+                </a>
+              </div>
+              <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
+                <a href="{% url 'post' recommendation.3.id %}" class="blog-link"><h5 style="font-weight: 800;">{{ recommendation.3.title }}</h5></a>
+                <div class="row justify-content-between">
+                  <p class="col-4 mb-0">{{ recommendation.3.author }}</p>
+                  <p class="text-right col mb-0">{{ recommendation.3.published_date|date:"d F Y" }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Row -->
+        </div>
+      </div>
+  </div>
 
 </main><!-- /.container -->
 

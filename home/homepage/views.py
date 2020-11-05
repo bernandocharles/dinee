@@ -57,9 +57,12 @@ def blog(request):
     return render(request, template + "blog.html", blogdata)
 
 def blogpost(request, postnumber):
+    post = Blogpost.objects.get(id=postnumber)
+    recommended = search.blogcategory(post.category)
     data = {
         "postnumber": int(postnumber),
-        "post": Blogpost.objects.get(id=postnumber),
+        "post": post,
+        "recommendation": recommended,
         "blog": True
     }
     return render(request, template + 'blogpost.html', data)
