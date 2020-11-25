@@ -28,6 +28,7 @@ def homepage(request):
     #project = Project.objects.get(pk=pk)
     #context = {"project": project}
     data = {
+        "blogposts": Blogpost.objects.order_by('published_date').reverse(),
         "homepage": True
     }
     return render(request, template + "homepage.html", data)

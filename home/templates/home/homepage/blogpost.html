@@ -35,13 +35,13 @@
         <hr class="line-break">
         <div class="d-flex flex-row justify-content-between">
           <p style="color: #000000; font-family: 'Raleway', 'sans-serif'; font-weight: 300;">Bagikan artikel ini:</p>
-          <div>
+          <div style="display: flex; flex-direction: row;">
             <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/post/{{post.id}}&text=Dinee%20Blog%20Post" data-show-count="false">
               <img src="{% static 'img/twitter.png' %}" width="38px"></a>
-            <a href="">
-              <img src="{% static 'img/fb.png' %}" width="38px"></a>
-            <a href="">
-              <img src="{% static 'img/linkedin.png' %}" width="38px"></a>
+            <div  data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small">
+              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/post/{{post.id}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+              <img src="{% static 'img/facebook.png' %}" width="38px"></a>
+            </div>
           </div>
         </div>
         <br>

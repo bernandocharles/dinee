@@ -76,6 +76,11 @@ li.easy-way-li::marker {
   font-weight: 800;
   line-height: 25.83px;
   margin-bottom: 23px;
+  color: #E94924!important;
+}
+
+.fb-button:hover {
+  cursor: 'pointer'
 }
 
 .cat-link {
@@ -144,8 +149,8 @@ li.easy-way-li::marker {
 }
 
 .easy-way-li.active {
-  background-color: #E94924;
-  color: white;
+  background-color: #E94924!important;
+  color: white!important;
 }
 
 .easy-way-li .number {
@@ -175,8 +180,8 @@ li.easy-way-li::marker {
 }
 
 .easy-way-li.active .number {
-  background-color: white;
-  color: #E94924;
+  background-color: white!important;
+  color: #E94924!important;
 }
 
 .easy-way-header {
@@ -212,6 +217,19 @@ li.easy-way-li::marker {
   color: #E94924;
   max-width: 14px;
   height: auto;
+}
+
+.hero-image-bg {
+  /* position: absolute; */
+  top: 5%;
+  left: -5%;
+}
+
+.hero-image-fg {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 2;
 }
 
 .h2-title {
@@ -296,6 +314,7 @@ background-color: transparent;
 }
 
 #cool-shape {
+  position: static;
   /* width: 308px;
   height: 343px;
   border-radius: 50%;
@@ -449,6 +468,12 @@ background-color: transparent;
     font-size: 36px;
     font-weight: 500;
   }
+  
+  .hero-image-bg {
+    position: absolute;
+    top: 5%;
+    left: -5%;
+  }
 
   .navbar li {
       margin-left : 1em;
@@ -478,13 +503,13 @@ background-color: transparent;
   }
 
   #cool-shape {
-    /* position: relative; */
+    position: relative;
     
     width: 770.25px;
     height: 862.6px;
 
-    left: 143.97px;
-    top: 43px;
+    /* left: 143.97px;
+    top: 43px; */
     margin-top: -43px;
     margin-left: -200.97px;
 
@@ -508,10 +533,6 @@ background-color: transparent;
     height: 648px;
     color: white;
     background-color: #E94924;
-  }
-
-  #easy-way {
-    height: 90vh;
   }
 
   #easy-way-ol {

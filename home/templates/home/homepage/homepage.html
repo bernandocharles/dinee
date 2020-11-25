@@ -48,7 +48,10 @@
         <h2 class="text-lg-left h2-title">Kenapa harus dinee?</h2>
     </div>
     <div class="row">
-        <div id="cool-shape"><img src="https://i.imgur.com/tHaxEiS.png" width="100%"></div>
+        <div id="cool-shape">
+            <img class="hero-image-bg" src="{% static 'img/why-dinee/new kenapa harus dinee bg.png' %}" width="105%">
+            <img class="hero-image-fg" src="https://i.imgur.com/G7JTWmz.png" width="75%">
+        </div>
         <ul id="homepage-ul">
             <li id="homepage-ul-1">
                 <h2 class="card-title">Menu Makanan dari Restoran Terbaik</h2>
@@ -133,19 +136,31 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-4">
-                <img class="blog-preview" src="{% static 'img/food.jpg' %}" width="100%">
-                <p class="blog-date">August 18, 2020</p>
-                <p class="blog-title">Cara aman makan di restoran saat pandemi</p>
+                <a href="{% url 'post' blogposts.0.id %}">
+                    <img class="blog-preview" src="{{ blogposts.0.image }}" width="100%">
+                </a>
+                <p class="blog-date">{{ blogposts.0.published_date|date:"d F Y"  }}</p>
+                <a href="{% url 'post' blogposts.0.id %}">
+                    <p class="blog-title">{{ blogposts.0.title }}</p>
+                </a>
             </div>
             <div class="col-12 col-md-4">
-                <img class="blog-preview" src="{% static 'img/food.jpg' %}" width="100%">
-                <p class="blog-date">August 12, 2020</p>
-                <p class="blog-title">Kemudahan Contactless Dining</p>
+                <a href="{% url 'post' blogposts.1.id %}">
+                    <img class="blog-preview" src="{{ blogposts.1.image }}" width="100%">
+                </a>
+                <p class="blog-date">{{ blogposts.1.published_date|date:"d F Y"  }}</p>
+                <a href="{% url 'post' blogposts.1.id %}">
+                    <p class="blog-title">{{ blogposts.1.title }}</p>
+                </a>
             </div>
             <div class="col-12 col-md-4">
-                <img class="blog-preview" src="{% static 'img/food.jpg' %}" width="100%">
-                <p class="blog-date">August 8, 2020</p>
-                <p class="blog-title">Simak tips n trick memilih restoran</p>
+                <a href="{% url 'post' blogposts.2.id %}">
+                    <img class="blog-preview" src="{{ blogposts.2.image }}" width="100%">
+                </a>
+                <p class="blog-date">{{ blogposts.2.published_date|date:"d F Y"  }}</p>
+                <a href="{% url 'post' blogposts.2.id %}">
+                    <p class="blog-title">{{ blogposts.2.title }}</p>
+                </a>
             </div>
         </div>
     </div>

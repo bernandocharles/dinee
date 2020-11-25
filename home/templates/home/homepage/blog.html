@@ -42,7 +42,7 @@
       <div class="row flex-sm-column flex-md-row mb-2" id="blog-highlight">
         <div class="blog-card col-sm-12 col-md-6 flex-column mb-5 mb-md-1 justify-content-between">
           <a href="{% url 'post' blogposts.0.id %}">
-            <img src="{% static 'img/classy.png' %}" width='100%' height='auto'>
+            <img src="{{ blogposts.0.image }}" width='100%' height='auto'>
           </a>
           <h3 class="my-3">
             <a href="{% url 'post' blogposts.0.id %}" class="blog-link">
@@ -59,7 +59,7 @@
           <div class="row mb-4">
             <div class="col-6">
               <a href="{% url 'post' blogposts.1.id %}">
-                <img src="{% static 'img/classy.png' %}" href="{% url 'post' blogposts.1.id %}" width='95%'>
+                <img src="{{ blogposts.1.image }}" href="{% url 'post' blogposts.1.id %}" width='95%'>
               </a>
             </div>
             <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
@@ -73,7 +73,7 @@
           <div class="row my-4">
             <div class="col-6">
               <a href="{% url 'post' blogposts.2.id %}">
-                <img src="{% static 'img/classy.png' %}" href="{% url 'post' blogposts.2.id %}" width='95%'>
+                <img src="{{ blogposts.2.image }}" href="{% url 'post' blogposts.2.id %}" width='95%'>
               </a>
             </div>
             <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
@@ -87,7 +87,7 @@
           <div class="row mt-4">
             <div class="col-6">
               <a href="{% url 'post' blogposts.3.id %}">
-                <img src="{% static 'img/classy.png' %}" href="{% url 'post' blogposts.3.id %}" width='95%'>
+                <img src="{{ blogposts.3.image }}" href="{% url 'post' blogposts.3.id %}" width='95%'>
               </a>
             </div>
             <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
