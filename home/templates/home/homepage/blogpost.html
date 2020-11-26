@@ -39,7 +39,9 @@
             <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/post/{{post.id}}&text=Dinee%20Blog%20Post" data-show-count="false">
               <img src="{% static 'img/twitter.png' %}" width="38px"></a>
             <div  data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small">
-              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/post/{{post.id}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+              <a class="fb-button"
+                onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/post/{{post.id}}&amp;src=sdkpreparse','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')"
+                class="fb-xfbml-parse-ignore">
               <img src="{% static 'img/facebook.png' %}" width="38px"></a>
             </div>
           </div>

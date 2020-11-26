@@ -189,6 +189,14 @@ li.easy-way-li::marker {
   word-wrap: break-word;
 }
 
+.easy-way-slider-fg {
+  position: absolute;
+  top: 5%;
+  height: 400px;
+  left: 25%;
+  z-index: 2;
+}
+
 .easy-way-text {
   font-size: 1em;
   word-wrap: break-word;
@@ -199,6 +207,10 @@ li.easy-way-li::marker {
   font-weight: 300;
   font-size: 16px;
   line-height: 50px;
+}
+
+.fb-button:hover {
+  cursor: pointer;
 }
 
 .generic-header-1 {
@@ -333,8 +345,9 @@ background-color: transparent;
 }
 
 #cool-shape-2 {
-  width: 463.05px;
-  height: 518.57px;
+  position: relative;
+  /* width: 463.05px;
+  height: 518.57px; */
   /* border-radius: 50%;
   display: flex;
   align-items: center;
@@ -468,6 +481,14 @@ background-color: transparent;
     font-size: 36px;
     font-weight: 500;
   }
+
+  .easy-way-slider-fg {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    height: 500px;
+    z-index: 2;
+  }
   
   .hero-image-bg {
     position: absolute;
@@ -517,11 +538,15 @@ background-color: transparent;
   }
 
   #cool-shape-2 {
+    position: relative;
+
     width: 600.05px;
-    height: auto;
+    height: 600px;
 
     margin-right: 0px;
     margin-left: -4vw;
+
+    padding-left: 4vw;
   }
 
   #dinee-blog {
