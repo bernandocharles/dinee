@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+
+<meta property="og:url"                content="{% url 'post' post.id %}" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="{{ post.title }}" />
+<meta property="og:description"        content="{{ post.subtitle }}" />
+<meta property="og:image"              content="{{ post.image }}" />
+
+<main role="main" class="container">
+  <br>
+  <br>
+  <br>
+
+  <div class="row my-5">
+    <div class="col-md-8 blog-main">
+
+      <div class="blog-post">
+        <h1 class="blog-post-title" style="color: #000000; font-weight: 800;">{{ post.title }}</h1>
+        
+        <p class="my-4" style="color: #52575C;">{{ post.summary }}</p>
+        <!-- <p class="blog-post-meta my-4" style="color: #000000; font-weight: 300;">{{ post.published_date }} by {{ post.author }}</p> -->
+        <div class="row justify-content-between mt-4 mb-2" style="color: #000000; font-weight: 300;">
+          <p class="col-4">{{ post.author }}</p>
+          <p class="text-right col">{{ post.published_date|date:"d F Y"  }}</p>
+        </div>
+        <img src="{{ post.image }}" width="100%">
+        <br>
+        <div style="color: #52575C;">
+          {{ post.content|safe }}
+        </div>
+        <br class="mb-5">
+        <hr class="line-break">
+        <div class="d-flex flex-row justify-content-between">
+          <p style="color: #000000; font-family: 'Raleway', 'sans-serif'; font-weight: 300;">Bagikan artikel ini:</p>
+          <div style="display: flex; flex-direction: row;">
+            <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/post/{{post.id}}&text=Dinee%20Blog%20Post" data-show-count="false">
+              <img src="{% static 'img/twitter.png' %}" width="38px"></a>
+            <div  data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small">
+              <a class="fb-button"
+                onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/post/{{post.id}}&amp;src=sdkpreparse','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')"
+                class="fb-xfbml-parse-ignore">
+              <img src="{% static 'img/facebook.png' %}" width="38px"></a>
+            </div>
+          </div>
+        </div>
+        <br>
+
+    </div><!-- /.blog-main -->
+
+  </div><!-- /.row -->
+
+  <!-- Blog recommendations -->
+  <div class="col-md-12 p-0">
+    <div>
+        <div class="d-flex flex-row justify-content-between mb-5 align-items-center">
+        <h2 class="text-lg-left" style="color: #e94924;">Baca Artikel Lain</h2>
+        </div>
+        <div class="col">
+          <!-- Row 1 -->
+          <div class="row flex-nowrap justify-content-between py-md-4">
+            <div class="row mb-4 col-md-6">
+              <div class="col-6">
+                <a href="{% url 'post' recommendation.0.id %}">
+                  <img src="{{ recommendation.0.image }}" href="{% url 'post' recommendation.0.id %}" width='95%'>
+                </a>
+              </div>
+              <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
+                <a href="{% url 'post' recommendation.0.id %}" class="blog-link"><h5 style="font-weight: 800;">{{ recommendation.0.title }}</h5></a>
+                <div class="row justify-content-between">
+                  <p class="col-4 mb-0">{{ recommendation.0.author }}</p>
+                  <p class="text-right col mb-0">{{ recommendation.0.published_date|date:"d F Y" }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4 col-md-6">
+              <div class="col-6">
+                <a href="{% url 'post' recommendation.1.id %}">
+                  <img src="{{ recommendation.1.image }}" href="{% url 'post' recommendation.1.id %}" width='95%'>
+                </a>
+              </div>
+              <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
+                <a href="{% url 'post' recommendation.1.id %}" class="blog-link"><h5 style="font-weight: 800;">{{ recommendation.1.title }}</h5></a>
+                <div class="row justify-content-between">
+                  <p class="col-4 mb-0">{{ recommendation.1.author }}</p>
+                  <p class="text-right col mb-0">{{ recommendation.1.published_date|date:"d F Y" }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="row flex-nowrap justify-content-between py-md-4">
+            <div class="row mb-4 col-md-6">
+              <div class="col-6">
+                <a href="{% url 'post' recommendation.2.id %}">
+                  <img src="{{ recommendation.2.image }}" href="{% url 'post' recommendation.2.id %}" width='95%'>
+                </a>
+              </div>
+              <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
+                <a href="{% url 'post' recommendation.2.id %}" class="blog-link"><h5 style="font-weight: 800;">{{ recommendation.2.title }}</h5></a>
+                <div class="row justify-content-between">
+                  <p class="col-4 mb-0">{{ recommendation.2.author }}</p>
+                  <p class="text-right col mb-0">{{ recommendation.2.published_date|date:"d F Y" }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4 col-md-6">
+              <div class="col-6">
+                <a href="{% url 'post' recommendation.3.id %}">
+                  <img src="{{ recommendation.3.image }}" href="{% url 'post' recommendation.3.id %}" width='95%'>
+                </a>
+              </div>
+              <div class="col-6 px-0 mx-0 d-flex flex-column justify-content-between">
+                <a href="{% url 'post' recommendation.3.id %}" class="blog-link"><h5 style="font-weight: 800;">{{ recommendation.3.title }}</h5></a>
+                <div class="row justify-content-between">
+                  <p class="col-4 mb-0">{{ recommendation.3.author }}</p>
+                  <p class="text-right col mb-0">{{ recommendation.3.published_date|date:"d F Y" }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Row -->
+        </div>
+      </div>
+  </div>
+
+</main><!-- /.container -->
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endblock %}
